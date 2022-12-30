@@ -54,14 +54,8 @@ function ResponsiveAppBar() {
 		>
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters variant='dense'>
-					<CustomImage
-						width={120}
-						height={120}
-						src={'/icons/icon.png'}
-						alt='illinois maids icon'
-					/>
 					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-					{/* <Typography
+					<Typography
 						variant='h6'
 						noWrap
 						component='a'
@@ -76,8 +70,13 @@ function ResponsiveAppBar() {
 							textDecoration: 'none',
 						}}
 					>
-						LOGO
-					</Typography> */}
+						<CustomImage
+							width={120}
+							height={120}
+							src={'/icons/icon.png'}
+							alt='illinois maids icon'
+						/>
+					</Typography>
 
 					<Box
 						sx={{

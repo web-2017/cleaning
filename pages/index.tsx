@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Box, Container, Link, TextField, Typography } from '@mui/material'
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
 
 import styles from '../styles/Home.module.css'
-import { Header } from '../src/components/Header'
-import { CustomContainer } from '../src/components/CustomContainer'
+import { CustomContainer } from '@/components/CustomContainer'
+import { Hero } from '@/components/Hero'
+import { SectionAbout } from '@/components/SectionAbout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,23 +32,8 @@ export default function Home() {
 
 	return (
 		<CustomContainer title='Home page'>
-			<TextField />
-			<Box
-				sx={{
-					my: 4,
-					display: 'flex',
-					flexDirection: 'column',
-					justifyContent: 'center',
-					alignItems: 'center',
-				}}
-			>
-				<Typography variant='h4' component='h1' gutterBottom>
-					MUI v5 + Next.js with TypeScript example
-				</Typography>
-				<Link href='/about' color='secondary'>
-					Go to the about page
-				</Link>
-			</Box>
+			<Hero />
+			<SectionAbout />
 		</CustomContainer>
 	)
 }

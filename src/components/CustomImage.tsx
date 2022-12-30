@@ -1,10 +1,12 @@
+import { CSSProperties } from 'react'
 import Image from 'next/image'
 
 type MyLoaderType = {
 	src: string
-	width: number
-	height: number
+	width: string
+	height: string
 	alt: string
+	style: CSSProperties
 }
 
 // const myLoader = () => {
@@ -14,9 +16,9 @@ type MyLoaderType = {
 export const CustomImage = ({
 	src,
 	alt = 'Picture of the author',
-	width = 100,
-	height = 100,
-	...props
+	width = '100',
+	height = '100',
+	style,
 }: MyLoaderType) => {
-	return <Image src={src} alt={alt} width={width} height={height} {...props} />
+	return <Image src={src} alt={alt} width={width} height={height} {...style} />
 }
