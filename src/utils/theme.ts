@@ -8,7 +8,6 @@ export const roboto = Roboto({
 	display: 'swap',
 	fallback: ['Helvetica', 'Arial', 'sans-serif'],
 })
-
 // Create a theme instance.
 const theme = createTheme({
 	palette: {
@@ -18,8 +17,13 @@ const theme = createTheme({
 		secondary: {
 			main: '#19857b',
 		},
+
 		error: {
 			main: red.A400,
+		},
+		text: {
+			primary: '#5A5A5A',
+			secondary: '#333',
 		},
 	},
 	typography: {

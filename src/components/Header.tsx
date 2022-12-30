@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export const Header = ({ title = 'Create Next App' }) => {
+export const Header = ({ title = 'Home title' }) => {
 	return (
 		<Head>
 			<title>{title}</title>
