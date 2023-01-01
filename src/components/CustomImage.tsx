@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 type MyLoaderType = {
 	src: string
-	width: string
-	height: string
+	width: number
+	height: number
 	alt: string
 	style: CSSProperties
 }
@@ -16,9 +16,9 @@ type MyLoaderType = {
 export const CustomImage = ({
 	src,
 	alt = 'Picture of the author',
-	width = '100',
-	height = '100',
+	width = 100,
+	height = 100,
 	style,
 }: MyLoaderType) => {
-	return <Image src={src} alt={alt} width={width} height={height} {...style} />
+	return <Image src={src} alt={alt} width={width} height={height} style={style} />
 }

@@ -44,7 +44,6 @@ function ResponsiveAppBar() {
 
 	const { text } = theme.palette
 
-	console.log(1, text)
 
 	return (
 		<AppBar
