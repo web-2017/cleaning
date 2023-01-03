@@ -6,7 +6,7 @@ type MyLoaderType = {
 	width: number
 	height: number
 	alt: string
-	style: CSSProperties
+	style?: CSSProperties
 }
 
 // const myLoader = () => {
@@ -20,5 +20,7 @@ export const CustomImage = ({
 	height = 100,
 	style,
 }: MyLoaderType) => {
-	return <Image src={src} alt={alt} width={width} height={height} style={style} />
+	return (
+		<Image src={src} alt={alt} width={width} height={height} style={style} />
+	)
 }

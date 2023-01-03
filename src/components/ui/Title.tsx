@@ -3,24 +3,27 @@ import { useTheme } from '@mui/material/styles'
 import { Typography } from '@mui/material'
 
 type TitleType = {
-	style?: CSSProperties,
+	style?: CSSProperties
 	color?: any
+	size?: number
+	variant?: string
 }
 
 export const Title: FC<PropsWithChildren<TitleType>> = ({
 	children,
 	style,
 	color,
+	size,
+	variant = 'h2',
 	...otherProps
 }) => {
 	const theme = useTheme()
-	console.log(1, color);
-
 
 	return (
 		<Typography
-			variant='h2'
+			variant={variant}
 			fontWeight={500}
+			fontSize={size}
 			color={color ?? theme.palette.text.primary}
 			style={{ fontFamily: theme.typography.fontFamily, ...style }}
 			{...otherProps}

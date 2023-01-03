@@ -1,19 +1,15 @@
 import React from 'react'
-import { Box, Grid, Paper } from '@mui/material'
-import { url } from 'inspector'
-import { after } from 'node:test'
-import { Title } from './Title'
+import { Box, Button, Grid, useTheme } from '@mui/material'
+import { CalendarMonthOutlined } from '@mui/icons-material'
+
 import { roboto } from '../utils/theme'
-import { useTheme } from '@mui/material/styles'
+import { CustomImage, Title, CustomButton } from '@/ui'
 
 const styles = {
 	wrapper: {
-		background: `url(${'/bg/hero.jpg'}) center center/cover no-repeat`,
-		width: '100%',
-		height: '500px',
-		backgroundPosition: 'left',
-		backgroundSize: 'cover',
-		position: 'relative',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
 	wrapperTitle: {
 		position: 'absolute',
@@ -23,37 +19,38 @@ const styles = {
 export const Hero = () => {
 	const theme = useTheme()
 	return (
-		<Grid item xs={12}>
-			<Paper style={styles.wrapper}>
-				<Box
-					component={'div'}
-					sx={{
-						position: 'absolute',
-						width: '100%',
-						height: '100%',
-						background: '#00000047',
-						top: 0,
-						left: 0,
-						zIndex: 1,
-					}}
-				>
-					<Title
-						variant='h4'
-						style={{
-							position: 'absolute',
-							top: '50%',
-							left: '50%',
-							color: '#fff',
-							transform: 'translate(-50%,-50%)',
-							width: '40%',
-							textAlign: 'center',
-							zIndex: 10,
-						}}
-					>
-						PROFESSIONAL RESIDENTIAL AND COMMERCIAL CLEANING SERVICES
+		<Grid container xs={12}>
+			<Grid item xs={12} md={6} style={styles.wrapper}>
+				<Box sx={{ width: { xs: '100%', md: '400px' } }}>
+					<Title variant='h3' size={20} pb={2}>
+						HIGHLY PROFESSIONAL CLEANING
 					</Title>
+					<Title variant='h1' size={40}>
+						<span style={{ color: theme.palette.primary.main }}>
+							EASY TO CLEAN
+						</span>{' '}
+						HOUSE AND OFFICE
+					</Title>
+					<p>
+						Amet minim mollit non deserunt ullamco sit aliqua dolor do amet
+						sint. Velit officia enim velit mollit. Exercitation veniam consequat
+						sunt nostrud amet.
+					</p>
+					<CustomButton
+						variant='contained'
+						text='Get a Quote'
+						startIcon={<CalendarMonthOutlined />}
+					/>
 				</Box>
-			</Paper>
+			</Grid>
+			<Grid item xs={12} md={6} style={{ textAlign: 'center' }}>
+				<CustomImage
+					alt='home page illinois maids images'
+					width={300}
+					height={400}
+					src='/other/hero-girl.png'
+				/>
+			</Grid>
 		</Grid>
 	)
 }

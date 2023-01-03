@@ -15,7 +15,7 @@ import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import { useTheme } from '@mui/material/styles'
 import Image from 'next/image'
-import { CustomImage } from './CustomImage'
+import { CustomImage } from './ui/CustomImage'
 
 const pages = ['HOME', 'about', 'Pricing', 'service', 'Contacts']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
@@ -49,10 +49,14 @@ function ResponsiveAppBar() {
 		<AppBar
 			position='static'
 			elevation={0}
-			sx={{ background: '#fff', color: text.secondary }}
+			sx={{
+				background: '#fff',
+				color: text.secondary,
+				marginBottom: { md: 10, sx: 5 },
+			}}
 		>
 			<Container maxWidth='xl'>
-				<Toolbar disableGutters variant='dense'>
+				<Toolbar disableGutters variant='dense' style={{ overflow: 'hidden' }}>
 					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
 					<Typography
 						variant='h6'
@@ -70,8 +74,8 @@ function ResponsiveAppBar() {
 						}}
 					>
 						<CustomImage
-							width={120}
-							height={120}
+							width={60}
+							height={60}
 							src={'/icons/icon.png'}
 							alt='illinois maids icon'
 						/>

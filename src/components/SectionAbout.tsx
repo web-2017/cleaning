@@ -2,9 +2,7 @@ import { useTheme } from '@mui/material/styles'
 import { Grid } from '@mui/material'
 import React from 'react'
 
-import { CustomImage } from './CustomImage'
-import { Title } from './Title'
-import { Text } from './Text'
+import { CustomImage, Title, Text } from '@/ui'
 
 export const SectionAbout = () => {
 	const theme = useTheme()
@@ -14,7 +12,6 @@ export const SectionAbout = () => {
 			xs={12}
 			spacing={2}
 			sx={{
-
 				height: '400px',
 				margin: '100px 0',
 			}}
@@ -38,7 +35,7 @@ export const SectionAbout = () => {
 					style={{
 						position: 'absolute',
 						top: '50px',
-						right: 150
+						right: 150,
 					}}
 				/>
 
@@ -61,7 +58,7 @@ export const SectionAbout = () => {
 					style={{
 						position: 'absolute',
 						bottom: '40px',
-						left: 140
+						left: 140,
 					}}
 				/>
 			</Grid>
