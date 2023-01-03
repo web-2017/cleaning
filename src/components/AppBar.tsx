@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import Menu from '@mui/material/Menu'
+import { CalendarMonth } from '@mui/icons-material'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Avatar from '@mui/material/Avatar'
@@ -43,7 +44,6 @@ function ResponsiveAppBar() {
 	const theme = useTheme()
 
 	const { text } = theme.palette
-
 
 	return (
 		<AppBar
@@ -159,13 +159,17 @@ function ResponsiveAppBar() {
 						))}
 					</Box>
 
-					{/* <Box sx={{ flexGrow: 0 }}> */}
-					{/* <Tooltip title='Open settings'>
-							<IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-								<Avatar alt='Remy Sharp' src='/static/images/avatar/2.jpg' />
-							</IconButton>
-						</Tooltip> */}
-					{/* </Box> */}
+					<Box sx={{ flexGrow: 0 }}>
+						<Tooltip title='Book Schedule'>
+							<Button
+								onClick={handleOpenUserMenu}
+								variant='outlined'
+								endIcon={<CalendarMonth />}
+							>
+								Book Schedule
+							</Button>
+						</Tooltip>
+					</Box>
 				</Toolbar>
 			</Container>
 		</AppBar>
