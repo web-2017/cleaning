@@ -19,7 +19,13 @@ const styles = {
 export const Hero = () => {
 	const theme = useTheme()
 	return (
-		<Grid container xs={12}>
+		<Grid
+			container
+			xs={12}
+			style={{
+				background: 'linear-gradient(-45deg, #bfedfd, #fff, #fff, #bfedfd)',
+			}}
+		>
 			<Grid item xs={12} md={6} style={styles.wrapper}>
 				<Box sx={{ width: { xs: '100%', md: '400px' } }}>
 					<Title variant='h3' size={20} pb={2}>
