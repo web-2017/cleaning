@@ -18,8 +18,8 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 export const SectionAbout = () => {
 	const theme = useTheme()
 	return (
-		<Grid container xs={12} mt={4} spacing={2} sx={{}}>
-			<Grid item xs={12} sm={6} style={{ alignSelf: 'center' }}>
+		<Grid container mt={4} spacing={2} >
+			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
 				<Box
 					component={'h4'}
 					style={{
@@ -46,7 +46,7 @@ export const SectionAbout = () => {
 				</Text>
 				<CustomButton variant='contained' text='Our Services' />
 			</Grid>
-			<Grid item xs={12} sm={6} style={{ alignSelf: 'center' }}>
+			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
 				<ImageList
 					// sx={{ width: 500, height: 450, }}
 					variant="quilted"

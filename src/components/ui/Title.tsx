@@ -9,6 +9,8 @@ type TitleType = {
 	variant?: string
 }
 
+
+
 export const Title: FC<PropsWithChildren<TitleType>> = ({
 	children,
 	style,
@@ -19,13 +21,19 @@ export const Title: FC<PropsWithChildren<TitleType>> = ({
 }) => {
 	const theme = useTheme()
 
+
+
 	return (
 		<Typography
 			variant={variant}
 			fontWeight={500}
 			fontSize={size}
 			color={color ?? theme.palette.text.primary}
-			style={{ fontFamily: theme.typography.fontFamily, ...style }}
+			style={{
+				textTransform: 'uppercase',
+				fontFamily: theme.typography.fontFamily,
+				...style
+			}}
 			{...otherProps}
 		>
 			{children}

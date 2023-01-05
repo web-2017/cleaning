@@ -20,13 +20,13 @@ export const Hero = () => {
 	const theme = useTheme()
 	return (
 		<Grid
-			container
+			item={true}
 			xs={12}
 			style={{
 				background: 'linear-gradient(-45deg, #bfedfd, #fff, #fff, #bfedfd)',
 			}}
 		>
-			<Grid item xs={12} md={6} style={styles.wrapper}>
+			<Grid item={true} xs={12} md={6} style={styles.wrapper}>
 				<Box sx={{ width: { xs: '100%', md: '400px' } }}>
 					<Title variant='h3' size={20} pb={2}>
 						HIGHLY PROFESSIONAL CLEANING
@@ -49,7 +49,7 @@ export const Hero = () => {
 					/>
 				</Box>
 			</Grid>
-			<Grid item xs={12} md={6} style={{ textAlign: 'center' }}>
+			<Grid item={true} xs={12} md={6} style={{ textAlign: 'center' }}>
 				<CustomImage
 					alt='home page illinois maids images'
 					width={300}
