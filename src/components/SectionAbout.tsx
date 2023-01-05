@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTheme } from '@mui/material/styles'
 import { Box, Grid } from '@mui/material'
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
+import ImageList from '@mui/material/ImageList'
+import ImageListItem from '@mui/material/ImageListItem'
 
 import { CustomImage, Title, Text, CustomButton } from '@/ui'
 import { COLORS } from '../utils/COLORS'
@@ -10,15 +10,16 @@ import { COLORS } from '../utils/COLORS'
 function srcset(image: string, size: number, rows = 1, cols = 1) {
 	return {
 		src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-		srcSet: `${image}?w=${size * cols}&h=${size * rows
-			}&fit=crop&auto=format&dpr=2 2x`,
-	};
+		srcSet: `${image}?w=${size * cols}&h=${
+			size * rows
+		}&fit=crop&auto=format&dpr=2 2x`,
+	}
 }
 
 export const SectionAbout = () => {
 	const theme = useTheme()
 	return (
-		<Grid container mt={4} spacing={2} >
+		<Grid container mt={4} spacing={2}>
 			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
 				<Box
 					component={'h4'}
@@ -29,7 +30,7 @@ export const SectionAbout = () => {
 				>
 					about us
 				</Box>
-				<Title size={20} variant='h4'>
+				<Title bold size={20} variant='h4'>
 					QUICKLY AND EASY TO CLEAN YOUR OFFICE AND HOUSE
 				</Title>
 				<Text style={{ marginLeft: 0 }}>
@@ -49,22 +50,26 @@ export const SectionAbout = () => {
 			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
 				<ImageList
 					// sx={{ width: 500, height: 450, }}
-					variant="quilted"
+					variant='quilted'
 					cols={4}
 					rowHeight={150}
 				>
 					{itemData.map((item) => (
-						<ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+						<ImageListItem
+							key={item.img}
+							cols={item.cols || 1}
+							rows={item.rows || 1}
+						>
 							<img
 								{...srcset(item.img, 0, item.rows, item.cols)}
 								alt={item.title}
-								loading="lazy"
+								loading='lazy'
 							/>
 						</ImageListItem>
 					))}
 				</ImageList>
 			</Grid>
-		</Grid >
+		</Grid>
 	)
 }
 
@@ -93,6 +98,4 @@ const itemData = [
 		rows: 1,
 		cols: 2,
 	},
-
-
-];
+]

@@ -7,21 +7,19 @@ type TitleType = {
 	color?: any
 	size?: number
 	variant?: string
+	bold?: boolean
 }
-
-
 
 export const Title: FC<PropsWithChildren<TitleType>> = ({
 	children,
 	style,
 	color,
 	size,
+	bold,
 	variant = 'h2',
 	...otherProps
 }) => {
 	const theme = useTheme()
-
-
 
 	return (
 		<Typography
@@ -32,7 +30,8 @@ export const Title: FC<PropsWithChildren<TitleType>> = ({
 			style={{
 				textTransform: 'uppercase',
 				fontFamily: theme.typography.fontFamily,
-				...style
+				fontWeight: bold ? 'bold' : 'normal',
+				...style,
 			}}
 			{...otherProps}
 		>

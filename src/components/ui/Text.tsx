@@ -16,11 +16,13 @@ type VariantType =
 type TextType = {
 	variant?: VariantType
 	style?: CSSProperties
+	size?: number
 }
 
 export const Text: FC<PropsWithChildren<TextType>> = ({
 	variant,
 	style,
+	size,
 	children,
 	...otherProps
 }) => {
@@ -30,7 +32,7 @@ export const Text: FC<PropsWithChildren<TextType>> = ({
 			variant={variant}
 			gutterBottom
 			m={2}
-			style={style}
+			style={{ fontSize: size ?? 16, ...style }}
 		>
 			{children}
 		</Typography>

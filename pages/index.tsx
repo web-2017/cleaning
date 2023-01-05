@@ -5,7 +5,6 @@ import styles from '../styles/Home.module.css'
 import { CustomContainer } from '@/components/CustomContainer'
 import { Hero } from '@/components/Hero'
 import { SectionAbout } from '@/components/SectionAbout'
-import { Box } from '@mui/system'
 import { Brand } from '@/components/Brand'
 import Services from '@/components/Services'
 

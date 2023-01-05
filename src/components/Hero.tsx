@@ -20,8 +20,7 @@ export const Hero = () => {
 	const theme = useTheme()
 	return (
 		<Grid
-			item={true}
-			xs={12}
+			container
 			style={{
 				background: 'linear-gradient(-45deg, #bfedfd, #fff, #fff, #bfedfd)',
 			}}
