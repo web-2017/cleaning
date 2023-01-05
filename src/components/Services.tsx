@@ -30,8 +30,8 @@ const Services = () => {
 			</Grid>
 			<ServiceItems />
 			<Grid item={true} sm={12}>
-				<Box mt={4} sx={{ textAlign: 'center' }}>
-					<CustomButton size='small' variant='outlined' text='more...' />
+				<Box sx={{ textAlign: 'center' }}>
+					<CustomButton size='small' variant='outlined' text='show more...' />
 				</Box>
 			</Grid>
 		</Grid>
