@@ -6,6 +6,7 @@ import { CustomContainer } from '@/components/CustomContainer'
 import { Hero } from '@/components/Hero'
 import { SectionAbout } from '@/components/SectionAbout'
 import { Box } from '@mui/system'
+import { Brand } from '@/components/Brand'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -34,6 +35,7 @@ export default function Home() {
 	return (
 		<CustomContainer title='Home page'>
 			<Hero />
+			<Brand />
 			<SectionAbout />
 		</CustomContainer>
 	)
