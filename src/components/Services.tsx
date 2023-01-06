@@ -5,6 +5,7 @@ import { CustomButton, CustomImage, Title, Text } from '@/ui'
 import { COLORS } from 'src/utils/COLORS'
 import { useState } from 'react'
 import ServiceItems from './ServiceItems'
+import Link from 'next/link'
 
 const Services = () => {
 	const theme = useTheme()
@@ -31,7 +32,12 @@ const Services = () => {
 			<ServiceItems />
 			<Grid item={true} sm={12}>
 				<Box sx={{ textAlign: 'center' }}>
-					<CustomButton size='small' variant='outlined' text='show more...' />
+					<CustomButton
+						size='small'
+						variant='outlined'
+						text='show more...'
+						href={'/services'}
+					/>
 				</Box>
 			</Grid>
 		</Grid>

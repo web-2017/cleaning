@@ -30,6 +30,15 @@ const ServiceItems = () => {
 						justifyContent: 'center',
 						alignItems: 'flex-end',
 						paddingTop: 5,
+						'&:hover': {
+							backgroundColor: COLORS.blue,
+							h2: {
+								color: '#fff',
+							},
+							p: {
+								color: '#fff',
+							},
+						},
 					}}
 				>
 					<Paper
@@ -85,6 +94,15 @@ const ServiceItems = () => {
 						justifyContent: 'center',
 						alignItems: 'flex-end',
 						paddingTop: 5,
+						'&:hover': {
+							backgroundColor: COLORS.blue,
+							h2: {
+								color: '#fff',
+							},
+							p: {
+								color: '#fff',
+							},
+						},
 					}}
 				>
 					<Paper
@@ -141,6 +159,15 @@ const ServiceItems = () => {
 						justifyContent: 'center',
 						alignItems: 'flex-end',
 						paddingTop: 5,
+						'&:hover': {
+							backgroundColor: COLORS.blue,
+							h2: {
+								color: '#fff',
+							},
+							p: {
+								color: '#fff',
+							},
+						},
 					}}
 				>
 					<Paper
@@ -197,6 +224,15 @@ const ServiceItems = () => {
 						justifyContent: 'center',
 						alignItems: 'flex-end',
 						paddingTop: 5,
+						'&:hover': {
+							backgroundColor: COLORS.blue,
+							h2: {
+								color: '#fff',
+							},
+							p: {
+								color: '#fff',
+							},
+						},
 					}}
 				>
 					<Paper
@@ -239,7 +275,7 @@ const ServiceItems = () => {
 				sm={12}
 				md={4}
 				lg={3}
-				style={{ marginBottom: 80, display: 'flex', justifyContent: 'center' }}
+				style={{ marginBottom: 40, display: 'flex', justifyContent: 'center' }}
 			>
 				<Paper
 					elevation={1}
@@ -253,6 +289,15 @@ const ServiceItems = () => {
 						justifyContent: 'center',
 						alignItems: 'flex-end',
 						paddingTop: 5,
+						'&:hover': {
+							backgroundColor: COLORS.blue,
+							h2: {
+								color: '#fff',
+							},
+							p: {
+								color: '#fff',
+							},
+						},
 					}}
 				>
 					<Paper
@@ -295,7 +340,7 @@ const ServiceItems = () => {
 				sm={12}
 				md={4}
 				lg={3}
-				style={{ marginBottom: 80, display: 'flex', justifyContent: 'center' }}
+				style={{ marginBottom: 40, display: 'flex', justifyContent: 'center' }}
 			>
 				<Paper
 					elevation={1}
@@ -309,6 +354,15 @@ const ServiceItems = () => {
 						justifyContent: 'center',
 						alignItems: 'flex-end',
 						paddingTop: 5,
+						'&:hover': {
+							backgroundColor: COLORS.blue,
+							h2: {
+								color: '#fff',
+							},
+							p: {
+								color: '#fff',
+							},
+						},
 					}}
 				>
 					<Paper
@@ -350,7 +404,11 @@ const ServiceItems = () => {
 				sm={12}
 				md={4}
 				lg={3}
-				style={{ marginBottom: 80, display: 'flex', justifyContent: 'center' }}
+				style={{
+					marginBottom: 40,
+					display: 'flex',
+					justifyContent: 'center',
+				}}
 			>
 				<Paper
 					elevation={1}
@@ -364,6 +422,15 @@ const ServiceItems = () => {
 						justifyContent: 'center',
 						alignItems: 'flex-end',
 						paddingTop: 5,
+						'&:hover': {
+							backgroundColor: COLORS.blue,
+							h2: {
+								color: '#fff',
+							},
+							p: {
+								color: '#fff',
+							},
+						},
 					}}
 				>
 					<Paper
@@ -405,7 +472,7 @@ const ServiceItems = () => {
 				sm={12}
 				md={4}
 				lg={3}
-				style={{ marginBottom: 80, display: 'flex', justifyContent: 'center' }}
+				style={{ marginBottom: 40, display: 'flex', justifyContent: 'center' }}
 			>
 				<Paper
 					elevation={1}
@@ -419,6 +486,15 @@ const ServiceItems = () => {
 						justifyContent: 'center',
 						alignItems: 'flex-end',
 						paddingTop: 5,
+						'&:hover': {
+							backgroundColor: COLORS.blue,
+							h2: {
+								color: '#fff',
+							},
+							p: {
+								color: '#fff',
+							},
+						},
 					}}
 				>
 					<Paper

@@ -1,10 +1,13 @@
-import { CalendarMonthOutlined } from '@mui/icons-material'
 import { Button, ButtonProps } from '@mui/material'
-import { FC } from 'react'
+import Link from 'next/link'
+import { FC, CSSProperties } from 'react'
+import { COLORS } from '../../utils/COLORS'
 
 type CustomButtonType = {
 	text: string
 	afterIcon?: any
+	href?: string
+	linkStyle?: CSSProperties
 }
 
 export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
@@ -13,6 +16,8 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 	size,
 	startIcon,
 	endIcon,
+	href,
+	linkStyle,
 }) => {
 	return (
 		<Button
@@ -21,7 +26,17 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 			startIcon={startIcon}
 			endIcon={endIcon}
 		>
-			{text}
+			{href ? (
+				<Link
+					style={{ textDecoration: 'none', color: COLORS.blue, ...linkStyle }}
+					href={href ?? ''}
+					passHref
+				>
+					{text}
+				</Link>
+			) : (
+				text
+			)}
 		</Button>
 	)
 }
