@@ -5,18 +5,28 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
+import { CSSProperties } from 'react'
 
 type CustomCardType = {
 	title: string
 	text: string
 	img?: string
 	btn?: string[]
+	style?: CSSProperties
 }
 
-export const CustomCard = ({ title, text, img, btn }: CustomCardType) => {
+export const CustomCard = ({
+	title,
+	text,
+	img,
+	btn,
+	style,
+}: CustomCardType) => {
 	return (
-		<Card sx={{ maxWidth: 345 }}>
-			<CardMedia sx={{ height: 340 }} image={img} title='green iguana' />
+		<Card sx={{ maxWidth: 345 }} style={style}>
+			{img && (
+				<CardMedia sx={{ height: 340 }} image={img} title='green iguana' />
+			)}
 			<CardContent>
 				<Typography gutterBottom variant='h5' component='div'>
 					{title}
