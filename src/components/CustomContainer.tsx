@@ -14,7 +14,7 @@ export const CustomContainer: FC<PropsWithChildren<ContainerType>> = ({
 	...props
 }) => {
 	return (
-		<Container {...props} maxWidth='lg'>
+		<Container {...props} maxWidth='lg' >
 			<Header title={title} />
 			<ResponsiveAppBar />
 			<main className={''}>

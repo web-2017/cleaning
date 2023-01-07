@@ -13,6 +13,8 @@ type CustomCardType = {
 	img?: string
 	btn?: string[]
 	style?: CSSProperties
+	width?: number
+	height?: number
 }
 
 export const CustomCard = ({
@@ -21,11 +23,13 @@ export const CustomCard = ({
 	img,
 	btn,
 	style,
+	width = 345,
+	height = 340
 }: CustomCardType) => {
 	return (
-		<Card sx={{ maxWidth: 345 }} style={style}>
+		<Card sx={{ maxWidth: width }} style={style}>
 			{img && (
-				<CardMedia sx={{ height: 340 }} image={img} title='green iguana' />
+				<CardMedia sx={{ height: height }} image={img} title='green iguana' />
 			)}
 			<CardContent>
 				<Typography gutterBottom variant='h5' component='div'>
