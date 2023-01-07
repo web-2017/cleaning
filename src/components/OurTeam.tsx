@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import { CustomCard } from '@/ui'
+import { CustomCard, TitleSubtitle } from '@/ui'
 
 const fakeStaff = [
 	{
@@ -28,6 +28,7 @@ const fakeStaff = [
 const OurTeam = () => {
 	return (
 		<Grid container spacing={2}>
+			<TitleSubtitle subTitle='OUR TEAM' title='OUR EXPERT TEAM MEMBERS' style={{ marginBottom: 50 }} />
 			{fakeStaff?.map((person, index) => (
 				<Grid item={true} xs={6} md={3} key={index}>
 					<CustomCard

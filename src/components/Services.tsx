@@ -12,7 +12,7 @@ const Services = () => {
     return (
         <Grid container justifyContent={'center'} spacing={2} mt={2} mb={5}>
             <Grid item={true} sm={12}>
-                <TitleSubtitle subTitle='our service' title='WHAT WE ARE OFFERING' />
+                <TitleSubtitle subTitle='our service' title='WHAT WE ARE OFFERING' style={{ marginBottom: 90 }} />
             </Grid>
             <ServiceItems />
             <Grid item={true} sm={12}>

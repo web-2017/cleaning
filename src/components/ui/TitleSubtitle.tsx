@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import { COLORS } from 'src/utils/COLORS'
 import { Title } from './Title'
 
@@ -10,11 +10,12 @@ type TitleSubtitleType = {
 	titleVariant?: string
 	subtitleSize?: number
 	titleSize?: number
+	style?: CSSProperties
 }
 
-export const TitleSubtitle = ({ subTitle, title, titleSize = 32, subtitleSize = 18, subTitleVariant = 'h4', titleVariant = 'h3', ...otherProps }: TitleSubtitleType) => {
+export const TitleSubtitle = ({ subTitle, title, titleSize = 32, subtitleSize = 18, subTitleVariant = 'h4', titleVariant = 'h3', style, ...otherProps }: TitleSubtitleType) => {
 	return (
-		<Grid item={true} sm={12} {...otherProps}>
+		<Grid item={true} sm={12} style={style} {...otherProps}>
 			<Title
 				size={subtitleSize}
 				variant={subTitleVariant}
@@ -26,7 +27,7 @@ export const TitleSubtitle = ({ subTitle, title, titleSize = 32, subtitleSize = 
 			<Title
 				size={titleSize}
 				variant={titleVariant}
-				style={{ textAlign: 'center', marginBottom: 100 }}
+				style={{ textAlign: 'center' }}
 			>
 				{title}
 			</Title>

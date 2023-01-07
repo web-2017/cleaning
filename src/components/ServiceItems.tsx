@@ -13,7 +13,7 @@ const ServiceItems = () => {
 	return (
 		<>
 			<Grid
-				sm={12}
+				sm={6}
 				md={4}
 				lg={3}
 				style={{ marginBottom: 80, display: 'flex', justifyContent: 'center' }}
@@ -77,7 +77,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
-				sm={12}
+				sm={6}
 				md={4}
 				lg={3}
 				style={{ marginBottom: 80, display: 'flex', justifyContent: 'center' }}
@@ -142,7 +142,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
-				sm={12}
+				sm={6}
 				md={4}
 				lg={3}
 				style={{ marginBottom: 80, display: 'flex', justifyContent: 'center' }}
@@ -207,7 +207,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
-				sm={12}
+				sm={6}
 				md={4}
 				lg={3}
 				style={{ marginBottom: 80, display: 'flex', justifyContent: 'center' }}
@@ -272,7 +272,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
-				sm={12}
+				sm={6}
 				md={4}
 				lg={3}
 				style={{ marginBottom: 40, display: 'flex', justifyContent: 'center' }}
@@ -337,7 +337,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
-				sm={12}
+				sm={6}
 				md={4}
 				lg={3}
 				style={{ marginBottom: 40, display: 'flex', justifyContent: 'center' }}
@@ -401,7 +401,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
-				sm={12}
+				sm={6}
 				md={4}
 				lg={3}
 				style={{
@@ -469,7 +469,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
-				sm={12}
+				sm={6}
 				md={4}
 				lg={3}
 				style={{ marginBottom: 40, display: 'flex', justifyContent: 'center' }}
