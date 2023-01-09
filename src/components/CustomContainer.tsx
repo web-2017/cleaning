@@ -1,5 +1,12 @@
 import { FC, PropsWithChildren } from 'react'
-import { Box, Container, Grid, TextField, Typography } from '@mui/material'
+import {
+	Box,
+	Container,
+	CssBaseline,
+	Grid,
+	TextField,
+	Typography,
+} from '@mui/material'
 
 import { Header } from './Header'
 import ResponsiveAppBar from './AppBar'
@@ -14,14 +21,17 @@ export const CustomContainer: FC<PropsWithChildren<ContainerType>> = ({
 	...props
 }) => {
 	return (
-		<Container {...props} maxWidth='lg' >
-			<Header title={title} />
-			<ResponsiveAppBar />
-			<main className={''}>
-				<Grid container spacing={2}>
-					{children}
-				</Grid>
-			</main>
-		</Container>
+		<>
+			<CssBaseline />
+			<Container {...props} maxWidth='lg'>
+				<Header title={title} />
+				<ResponsiveAppBar />
+				<main className={''}>
+					<Grid container spacing={2}>
+						{children}
+					</Grid>
+				</main>
+			</Container>
+		</>
 	)
 }
