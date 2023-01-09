@@ -10,6 +10,7 @@ import Services from '@/components/home/Services'
 import OurTeam from '@/components/home/OurTeam'
 import Portfolio from '@/components/home/Portfolio'
 import Awards from '@/components/home/Awards'
+import { Customers } from '@/components/home/Customers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -44,6 +45,7 @@ export default function Home() {
 			<OurTeam />
 			<Portfolio />
 			<Awards />
+			<Customers />
 		</CustomContainer>
 	)
 }
