@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Button, Grid, useTheme } from '@mui/material'
 import { CalendarMonthOutlined } from '@mui/icons-material'
 
-import { roboto } from '../utils/theme'
+import { roboto } from '../../utils/theme'
 import { CustomImage, Title, CustomButton } from '@/ui'
 
 const styles = {

@@ -21,7 +21,8 @@
 			// "@": ["."],
 			"@/components/*": ["src/components/*"],
 			"@/img/*": ["public/*"],
-			"@/ui": ["src/components/ui/index.ts"]
+			"@/ui": ["src/components/ui/index.ts"],
+			"@/utils": ["src/utils/index.ts"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

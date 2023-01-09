@@ -10,7 +10,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 
 import { COLORS } from 'src/utils/COLORS'
-import { Title } from './ui'
+import { Title } from '@/ui'
 
 export const Brand = () => {
 	return (

@@ -5,7 +5,7 @@ import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 
 import { CustomImage, Title, Text, CustomButton } from '@/ui'
-import { COLORS } from '../utils/COLORS'
+import { COLORS } from '@/utils'
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
 	return {

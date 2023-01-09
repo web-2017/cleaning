@@ -3,13 +3,13 @@ import { Inter } from '@next/font/google'
 
 import styles from '../styles/Home.module.css'
 import { CustomContainer } from '@/components/CustomContainer'
-import { Hero } from '@/components/Hero'
-import { SectionAbout } from '@/components/SectionAbout'
-import { Brand } from '@/components/Brand'
-import Services from '@/components/Services'
-import OurTeam from '@/components/OurTeam'
-import Portfolio from '@/components/Portfolio'
-import Awards from '@/components/Awards'
+import { Hero } from '@/components/home/Hero'
+import { SectionAbout } from '@/components/home/SectionAbout'
+import { Brand } from '@/components/home/Brand'
+import Services from '@/components/home/Services'
+import OurTeam from '@/components/home/OurTeam'
+import Portfolio from '@/components/home/Portfolio'
+import Awards from '@/components/home/Awards'
 
 const inter = Inter({ subsets: ['latin'] })
 
