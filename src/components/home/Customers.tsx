@@ -1,9 +1,9 @@
 import React from 'react'
-import { Grid } from '@mui/material'
+import { Box, Grid, Rating } from '@mui/material'
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
 
-import { Title, TitleSubtitle } from '@/ui'
+import { Text, Title, TitleSubtitle } from '@/ui'
 
 const fakeCustomers = [
 	{
@@ -21,7 +21,7 @@ const fakeCustomers = [
 				name: 'Courtney Henry 2',
 				position: 'Nursing Assistant',
 				text: 'Aliqua id fugiat nostrud irure ex duis ea quis quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim.',
-				star: 4,
+				star: 5,
 			},
 			{
 				id: 3,
@@ -72,12 +72,22 @@ export const Customers = () => {
 							display: 'flex',
 							flexDirection: 'column',
 							textAlign: 'center',
+							padding: 30,
+							boxSizing: 'border-box',
 						}}
 						sm={12}
 						md={4}
 					>
-						<Title>{elem.name}</Title>
-						<Button className='CheckButton'>Check it out!</Button>
+						<TitleSubtitle
+							title={elem.name}
+							subTitle={elem.position}
+							titleSize={20}
+							subtitleSize={16}
+						/>
+						<Text size={14}>{elem.text}</Text>
+						<Box>
+							<Rating name='read-only' value={elem.star} readOnly />
+						</Box>
 					</Grid>
 				))}
 			</Grid>
@@ -85,9 +95,9 @@ export const Customers = () => {
 	}
 	return (
 		<Grid container spacing={2}>
-			<Grid sm={12} mt={5} mb={5}>
+			<Grid sm={12} mt={5} mb={10}>
 				<TitleSubtitle
-					mb={5}
+					mb={10}
 					title='WHAT OUR CUSTOMERS SAY'
 					subTitle='HAPPY CUSTOMERS'
 				/>
