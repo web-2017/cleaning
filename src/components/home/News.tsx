@@ -1,6 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material'
-import { TitleSubtitle } from '@/ui'
+import { CustomCard, TitleSubtitle } from '@/ui'
+import { newsData } from '../../utils/fakeData'
 
 const News = () => {
 	return (
@@ -10,7 +11,28 @@ const News = () => {
 				subTitle='LATEST NEWS'
 				titleStyle={{ fontWeight: 600 }}
 			/>
-			<Grid></Grid>
+
+			{newsData.map((post, i) => {
+				return (
+					<Grid
+						key={i}
+						item={true}
+						style={{ display: 'flex', flexDirection: 'row' }}
+					>
+						<CustomCard
+							title={post.title}
+							text={post.text}
+							style={{ textAlign: 'center' }}
+							img={post.src}
+							width={278}
+							height={177}
+							userAvatar={post.user.src}
+							userFullName={post.user.fullName}
+							userPosition={post.user.position}
+						/>
+					</Grid>
+				)
+			})}
 		</Grid>
 	)
 }

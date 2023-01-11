@@ -6,6 +6,8 @@ import CardMedia from '@mui/material/CardMedia'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { CSSProperties } from 'react'
+import Avatar from '@mui/material/Avatar'
+import Stack from '@mui/material/Stack'
 
 type CustomCardType = {
 	title: string
@@ -15,6 +17,9 @@ type CustomCardType = {
 	style?: CSSProperties
 	width?: number
 	height?: number
+	userFullName?: string
+	userPosition?: string
+	userAvatar?: string
 }
 
 export const CustomCard = ({
@@ -24,7 +29,10 @@ export const CustomCard = ({
 	btn,
 	style,
 	width = 345,
-	height = 340
+	height = 340,
+	userFullName,
+	userPosition,
+	userAvatar,
 }: CustomCardType) => {
 	return (
 		<Card sx={{ maxWidth: width }} style={style}>
@@ -32,6 +40,27 @@ export const CustomCard = ({
 				<CardMedia sx={{ height: height }} image={img} title='green iguana' />
 			)}
 			<CardContent>
+				{userFullName && (
+					<Stack
+						direction='row'
+						spacing={2}
+						style={{ textAlign: 'left', alignItems: 'center' }}
+					>
+						<Avatar
+							alt={userFullName}
+							src={userAvatar}
+							sx={{ width: 30, height: 30 }}
+						/>
+						<Stack direction='column'>
+							<Typography gutterBottom variant='body2' component='span'>
+								{userFullName}
+							</Typography>
+							<Typography gutterBottom variant='body2' component='p'>
+								{userPosition}
+							</Typography>
+						</Stack>
+					</Stack>
+				)}
 				<Typography gutterBottom variant='h5' component='div'>
 					{title}
 				</Typography>
