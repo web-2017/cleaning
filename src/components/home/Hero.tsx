@@ -22,7 +22,8 @@ export const Hero = () => {
 		<Grid
 			container
 			style={{
-				background: 'linear-gradient(-45deg, #bfedfd, #fff, #fff, #bfedfd)',
+				// background: 'linear-gradient(-45deg, #bfedfd, #fff, #fff, #bfedfd)',
+				background: 'url(/bg/bg-hero.png) top left no-repeat',
 			}}
 		>
 			<Grid item={true} xs={12} md={6} style={styles.wrapper}>
