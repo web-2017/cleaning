@@ -9,7 +9,7 @@ const News = () => {
 			<TitleSubtitle
 				title='READ OUR LATEST BLOG'
 				subTitle='LATEST NEWS'
-				titleStyle={{ fontWeight: 600 }}
+				titleStyle={{ fontWeight: 600, marginBottom: 90 }}
 			/>
 
 			{newsData.map((post, i) => {
@@ -29,6 +29,9 @@ const News = () => {
 							userAvatar={post.user.src}
 							userFullName={post.user.fullName}
 							userPosition={post.user.position}
+							cardTitleStyle={{ fontSize: 18 }}
+							cardTextStyle={{ fontSize: 14 }}
+							showDate
 						/>
 					</Grid>
 				)
