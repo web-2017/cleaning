@@ -79,8 +79,8 @@ export const CustomCard = ({
 						<Box
 							sx={{
 								position: 'absolute',
-								top: 0,
-								right: 0,
+								top: -27,
+								right: -5,
 								fontSize: 12,
 								backgroundColor: COLORS.blue,
 								color: '#fff',

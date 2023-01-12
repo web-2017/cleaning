@@ -1,5 +1,6 @@
 import React from 'react'
 import { Grid } from '@mui/material'
+
 import { CustomCard, TitleSubtitle } from '@/ui'
 import { newsData } from '../../utils/fakeData'
 
