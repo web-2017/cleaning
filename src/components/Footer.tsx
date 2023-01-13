@@ -1,15 +1,31 @@
 import { Grid } from '@mui/material'
 import { memo } from 'react'
 import { COLORS } from '../utils/COLORS'
+import { Box } from '@mui/system'
+import { CustomImage } from './ui'
+import { MainLogo } from './MainLogo'
 
 const Footer = () => {
 	return (
 		<Grid
 			item={true}
 			height={470}
-			style={{ backgroundColor: COLORS.footerBg.main, color: '#fff' }}
+			sm={4}
+			style={{
+				backgroundColor: COLORS.footerBg.main,
+				color: '#fff',
+				display: 'flex',
+				justifyContent: 'space',
+				alignItems: 'flex-end',
+			}}
 		>
-			Footer
+			<Grid container spacing={2} pl={2}>
+				<Grid item={true} sm={4}>
+					<Box>
+						<MainLogo />
+					</Box>
+				</Grid>
+			</Grid>
 		</Grid>
 	)
 }
