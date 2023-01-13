@@ -26,6 +26,9 @@ const theme = createTheme({
 			primary: '#5A5A5A',
 			secondary: '#333',
 		},
+		background: {
+			default: '#fff',
+		},
 	},
 	typography: {
 		fontFamily: roboto.style.fontFamily,

@@ -9,7 +9,15 @@ import { COLORS } from '../../utils/COLORS'
 
 const News = () => {
 	return (
-		<Grid container spacing={2} mb={12} style={{ position: 'relative' }}>
+		<Grid
+			item={true}
+			mb={12}
+			sm={12}
+			style={{
+				position: 'relative',
+				alignItems: 'center',
+			}}
+		>
 			<TitleSubtitle
 				title='READ OUR LATEST BLOG'
 				subTitle='LATEST NEWS'
@@ -48,33 +56,43 @@ const News = () => {
 					href='/news'
 				/>
 			</Grid>
-			{newsData.map((post, i) => {
-				return (
-					<Grid
-						key={i}
-						item={true}
-						style={{
-							display: 'flex',
-							flexDirection: 'row',
-						}}
-					>
-						<CustomCard
-							title={post.title}
-							text={post.text}
-							style={{ textAlign: 'center' }}
-							img={post.src}
-							width={278}
-							height={177}
-							userAvatar={post.user.src}
-							userFullName={post.user.fullName}
-							userPosition={post.user.position}
-							cardTitleStyle={{ fontSize: 18 }}
-							cardTextStyle={{ fontSize: 14 }}
-							showDate
-						/>
-					</Grid>
-				)
-			})}
+			<Grid
+				item={true}
+				sm={12}
+				style={{
+					display: 'flex',
+					flexDirection: 'row',
+				}}
+			>
+				{newsData.map((post, i) => {
+					return (
+						<Grid
+							item={true}
+							sm={4}
+							key={i}
+							style={{
+								display: 'flex',
+								flexDirection: 'row',
+							}}
+						>
+							<CustomCard
+								title={post.title}
+								text={post.text}
+								style={{ textAlign: 'center' }}
+								img={post.src}
+								width={278}
+								height={177}
+								userAvatar={post.user.src}
+								userFullName={post.user.fullName}
+								userPosition={post.user.position}
+								cardTitleStyle={{ fontSize: 18 }}
+								cardTextStyle={{ fontSize: 14 }}
+								showDate
+							/>
+						</Grid>
+					)
+				})}
+			</Grid>
 		</Grid>
 	)
 }

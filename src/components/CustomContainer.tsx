@@ -10,6 +10,7 @@ import {
 
 import { Header } from './Header'
 import ResponsiveAppBar from './AppBar'
+import Footer from './Footer'
 
 type ContainerType = {
 	title: string
@@ -31,6 +32,7 @@ export const CustomContainer: FC<PropsWithChildren<ContainerType>> = ({
 						{children}
 					</Grid>
 				</main>
+				<Footer />
 			</Container>
 		</>
 	)
