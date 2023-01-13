@@ -10,7 +10,7 @@ import {
 
 import { Header } from './Header'
 import ResponsiveAppBar from './AppBar'
-import Footer from './Footer'
+import Footer from './Footer/Footer'
 
 type ContainerType = {
 	title: string

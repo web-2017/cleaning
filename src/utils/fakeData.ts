@@ -48,3 +48,26 @@ export const newsData = [
 		date: new Date().toLocaleDateString(),
 	},
 ]
+
+export const footerMenu = [
+	{
+		id: 1,
+		title: 'Services',
+		menu: [
+			'House Cleaning',
+			'Office Cleaning',
+			'Window Cleaning',
+			'Floor Cleaning',
+		],
+	},
+	{
+		id: 2,
+		title: 'Useful Links',
+		menu: ['Home Page', 'Service Page', 'FAQ’s Page', 'Contact Us'],
+	},
+	{
+		id: 2,
+		title: 'Contact',
+		menu: ['(+021) 254 4458 187', 'info@email.com', 'Illinois, USA'],
+	},
+]
