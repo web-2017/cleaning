@@ -8,6 +8,7 @@ type CustomButtonType = {
 	afterIcon?: any
 	href?: string
 	linkStyle?: CSSProperties
+	style?: CSSProperties
 }
 
 export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
@@ -17,10 +18,10 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 	endIcon,
 	href,
 	linkStyle,
-	otherProps,
+	style,
 }) => {
 	return (
-		<Button {...otherProps} size={size} startIcon={startIcon} endIcon={endIcon}>
+		<Button size={size} startIcon={startIcon} endIcon={endIcon} style={style}>
 			{href ? (
 				<Link
 					style={{ textDecoration: 'none', color: COLORS.blue, ...linkStyle }}

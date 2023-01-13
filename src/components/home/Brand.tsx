@@ -10,7 +10,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 
 import { COLORS } from 'src/utils/COLORS'
-import { Title } from '@/ui'
+import { CustomImage, Title } from '@/ui'
 
 export const Brand = () => {
 	return (
@@ -35,7 +35,13 @@ export const Brand = () => {
 			>
 				<Grid item xs={2}>
 					<Box sx={{ textAlign: 'center' }}>
-						<Google style={{ color: '#fff', fontSize: 30 }} />
+						{/* <Google style={{ color: '#fff', fontSize: 30 }} /> */}
+						<CustomImage
+							alt='our partners'
+							width={30}
+							height={30}
+							src='/icons/airbnb-red.png'
+						/>
 					</Box>
 				</Grid>
 				<Grid item xs={2}>

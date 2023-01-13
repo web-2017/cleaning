@@ -109,10 +109,12 @@ const Footer = () => {
 							<Box sx={{ display: 'flex' }}>
 								<CssTextField
 									fullWidth
-									label='Enter your email...'
+									size='small'
+									label='Enter your email'
 									variant='outlined'
 								/>
 								<CustomButton
+									style={{ padding: 0 }}
 									variant='text'
 									size={'large'}
 									endIcon={<SendIcon style={{ fontSize: 40, color: '#fff' }} />}
