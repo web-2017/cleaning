@@ -4,7 +4,7 @@ import { FC, CSSProperties } from 'react'
 import { COLORS } from '../../utils/COLORS'
 
 type CustomButtonType = {
-	text: string
+	text?: string
 	afterIcon?: any
 	href?: string
 	linkStyle?: CSSProperties
@@ -12,20 +12,15 @@ type CustomButtonType = {
 
 export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 	text,
-	variant,
 	size,
 	startIcon,
 	endIcon,
 	href,
 	linkStyle,
+	otherProps,
 }) => {
 	return (
-		<Button
-			variant={variant}
-			size={size}
-			startIcon={startIcon}
-			endIcon={endIcon}
-		>
+		<Button {...otherProps} size={size} startIcon={startIcon} endIcon={endIcon}>
 			{href ? (
 				<Link
 					style={{ textDecoration: 'none', color: COLORS.blue, ...linkStyle }}

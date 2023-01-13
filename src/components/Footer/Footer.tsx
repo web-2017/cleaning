@@ -1,46 +1,59 @@
-import { Grid, IconButton } from '@mui/material'
+import {
+	Grid,
+	IconButton,
+	OutlinedInputProps,
+	TextField,
+	TextFieldProps,
+} from '@mui/material'
 import { Facebook, Instagram } from '@mui/icons-material'
-import { useTheme } from '@mui/material/styles'
+import { styled, useTheme, withStyles } from '@mui/material/styles'
 import { memo } from 'react'
 import { Box } from '@mui/system'
 
 import { COLORS } from '../../utils/COLORS'
-import { Text } from '@/ui'
+import { CustomButton, Text } from '@/ui'
 import { MainLogo } from '../MainLogo'
 import { FooterList } from './FooterList'
 import { footerMenu } from 'src/utils/fakeData'
 import { CONSTANTS } from '../../utils/constants'
+import SendIcon from '@mui/icons-material/Send'
 
 const Footer = () => {
 	const theme = useTheme()
 
-	const styles = {
-		listBtn: {
-			color: theme.palette.text.disabled,
-
-			'&:hover': {
+	const CssTextField = styled((props: TextFieldProps) => (
+		<TextField
+			InputProps={{ disableUnderline: true } as Partial<OutlinedInputProps>}
+			{...props}
+		/>
+	))(({ theme }) => ({
+		'& label.Mui-focused': {
+			color: '#fff',
+		},
+		'& label': {
+			color: '#fff',
+		},
+		'& .MuiInput-underline:after': {
+			borderBottomColor: '#fff',
+		},
+		'& .MuiOutlinedInput-root': {
+			'& fieldset': {
+				borderColor: '#fff',
 				color: '#fff',
 			},
-			'& > span': {
-				fontSize: 18,
+			'& > input': {
+				borderColor: '#fff',
+				color: '#fff',
 			},
+
+			// '&:hover fieldset': {
+			// 	borderColor: '#f5f5f5',
+			// },
+			// '&.Mui-focused fieldset': {
+			// 	borderColor: 'green',
+			// },
 		},
-		title: {
-			textTransform: 'capitalize',
-			'& > span': {
-				fontSize: 20,
-				fontWeight: 'bold',
-				'&:before': {
-					content: "''",
-					borderBottom: '1px solid #fff',
-					position: 'absolute',
-					bottom: 0,
-					width: 60,
-				},
-			},
-			fontWeight: 'bold',
-		},
-	}
+	}))
 
 	return (
 		<Box sx={{ backgroundColor: COLORS.footerBg.main }}>
@@ -88,6 +101,23 @@ const Footer = () => {
 							>
 								<Instagram />
 							</IconButton>
+						</Box>
+						<Box>
+							<Text style={{ marginLeft: 0 }}>
+								Subscribe our news letter to get latest news and updates
+							</Text>
+							<Box sx={{ display: 'flex' }}>
+								<CssTextField
+									fullWidth
+									label='Enter your email...'
+									variant='outlined'
+								/>
+								<CustomButton
+									variant='text'
+									size={'large'}
+									endIcon={<SendIcon style={{ fontSize: 40, color: '#fff' }} />}
+								/>
+							</Box>
 						</Box>
 					</Grid>
 
