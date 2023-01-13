@@ -6,11 +6,13 @@ import { CONSTANTS } from '../utils/constants'
 interface IMainLogoProps {
 	style?: CSSProperties
 	textStyle?: CSSProperties
+	variant?: boolean
 }
 
 export const MainLogo: FC<PropsWithChildren<IMainLogoProps>> = ({
 	style,
 	textStyle,
+	variant,
 	children,
 }) => {
 	return (
@@ -23,12 +25,43 @@ export const MainLogo: FC<PropsWithChildren<IMainLogoProps>> = ({
 				...style,
 			}}
 		>
-			<CustomImage src='/icons/icon.png' width={45} height={40} alt={'icon'} />
-			<Text
-				style={{ fontWeight: 'bold', textTransform: 'uppercase', ...textStyle }}
-			>
-				{CONSTANTS.mainTitle}
-			</Text>
+			{variant ? (
+				<>
+					<CustomImage
+						src='/icons/icon.png'
+						width={45}
+						height={40}
+						alt={'icon'}
+					/>
+					<Text
+						style={{
+							fontWeight: 'bold',
+							textTransform: 'uppercase',
+							...textStyle,
+						}}
+					>
+						{CONSTANTS.mainTitle}
+					</Text>
+				</>
+			) : (
+				<>
+					<CustomImage
+						src='/icons/icon2.png'
+						width={45}
+						height={40}
+						alt={'icon'}
+					/>
+					<Text
+						style={{
+							fontWeight: 'bold',
+							textTransform: 'uppercase',
+							...textStyle,
+						}}
+					>
+						{CONSTANTS.mainTitle}
+					</Text>
+				</>
+			)}
 		</Box>
 	)
 }

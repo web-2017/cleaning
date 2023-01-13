@@ -22,7 +22,7 @@ const Footer = () => {
 			<Grid container spacing={2} pl={2}>
 				<Grid item={true} sm={4}>
 					<Box>
-						<MainLogo />
+						<MainLogo variant />
 					</Box>
 				</Grid>
 			</Grid>

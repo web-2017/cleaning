@@ -16,6 +16,7 @@ import AdbIcon from '@mui/icons-material/Adb'
 import { useTheme } from '@mui/material/styles'
 import Image from 'next/image'
 import { CustomImage } from './ui/CustomImage'
+import { MainLogo } from './MainLogo'
 
 const pages = ['HOME', 'about', 'Pricing', 'service', 'Contacts']
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
@@ -73,12 +74,7 @@ function ResponsiveAppBar() {
 							textDecoration: 'none',
 						}}
 					>
-						<CustomImage
-							width={60}
-							height={60}
-							src={'/icons/icon.png'}
-							alt='illinois maids icon'
-						/>
+						<MainLogo />
 					</Typography>
 
 					<Box
