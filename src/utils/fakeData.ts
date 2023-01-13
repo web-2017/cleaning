@@ -53,21 +53,64 @@ export const footerMenu = [
 	{
 		id: 1,
 		title: 'Services',
-		menu: [
-			'House Cleaning',
-			'Office Cleaning',
-			'Window Cleaning',
-			'Floor Cleaning',
+		menus: [
+			{
+				link: 'house-cleaning',
+				text: 'House Cleaning',
+			},
+			{
+				link: 'office-cleaning',
+				text: 'Office Cleaning',
+			},
+			{
+				link: 'window-cleaning',
+				text: 'Window Cleaning',
+			},
+			{
+				link: 'floor-cleaning',
+				text: 'Floor Cleaning',
+			},
 		],
 	},
 	{
 		id: 2,
 		title: 'Useful Links',
-		menu: ['Home Page', 'Service Page', 'FAQ’s Page', 'Contact Us'],
+		menus: [
+			{
+				link: '/',
+				text: 'Home Page',
+			},
+			{
+				link: 'services',
+				text: 'Service Page',
+			},
+			{
+				link: 'faq',
+				text: 'FAQ’s Page',
+			},
+			{
+				link: 'contacts',
+				text: 'Contact Us',
+			},
+		],
 	},
+
 	{
-		id: 2,
+		id: 3,
 		title: 'Contact',
-		menu: ['(+021) 254 4458 187', 'info@email.com', 'Illinois, USA'],
+		menus: [
+			{
+				link: '#',
+				text: '(+021) 254 4458 187',
+			},
+			{
+				link: '#',
+				text: 'info@email.com',
+			},
+			{
+				link: '#',
+				text: 'Illinois, USA',
+			},
+		],
 	},
 ]

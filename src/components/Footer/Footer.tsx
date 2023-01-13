@@ -1,21 +1,15 @@
-import {
-	Grid,
-	IconButton,
-	ListItemButton,
-	ListItemIcon,
-	ListItemText,
-} from '@mui/material'
+import { Grid, IconButton } from '@mui/material'
 import { Facebook, Instagram } from '@mui/icons-material'
+import { useTheme } from '@mui/material/styles'
 import { memo } from 'react'
+import { Box } from '@mui/system'
 
 import { COLORS } from '../../utils/COLORS'
-import { Box } from '@mui/system'
 import { Text } from '@/ui'
 import { MainLogo } from '../MainLogo'
 import { FooterList } from './FooterList'
 import { footerMenu } from 'src/utils/fakeData'
-import SendIcon from '@mui/icons-material/Send'
-import { useTheme } from '@mui/material/styles'
+import { CONSTANTS } from '../../utils/constants'
 
 const Footer = () => {
 	const theme = useTheme()
@@ -32,6 +26,7 @@ const Footer = () => {
 			},
 		},
 		title: {
+			textTransform: 'capitalize',
 			'& > span': {
 				fontSize: 20,
 				fontWeight: 'bold',
@@ -48,73 +43,80 @@ const Footer = () => {
 	}
 
 	return (
-		<Grid
-			item={true}
-			height={470}
-			sm={4}
-			style={{
-				backgroundColor: COLORS.footerBg.main,
-				color: '#fff',
-				display: 'flex',
-				justifyContent: 'space',
-				alignItems: 'center',
-				paddingLeft: 100,
-				paddingBottom: 20,
-			}}
-		>
-			<Grid container spacing={2} pl={2}>
-				<Grid item={true} sm={4}>
-					<Box>
-						<MainLogo variant />
-						<Text style={{ marginLeft: 0 }}>
-							Amet minim mollit non deserunt ullamc est sit aliqua dolor amet
-							sint. Amet minim mollit non deserunt ullamco est sit aliqua.
-						</Text>
-					</Box>
-					<Box sx={{ textAlign: 'center' }}>
-						<IconButton
-							href='https://www.facebook.com/'
-							aria-label='upload picture'
-							target={'_blank'}
-							style={{ color: '#fff' }}
-						>
-							<Facebook />
-						</IconButton>
-						<IconButton
-							style={{ color: '#fff' }}
-							aria-label='upload picture'
-							target={'_blank'}
-							href='https://twitter.com/'
-						>
-							<Instagram />
-						</IconButton>
-					</Box>
-				</Grid>
+		<Box sx={{ backgroundColor: COLORS.footerBg.main }}>
+			<Grid
+				item={true}
+				height={470}
+				sm={4}
+				style={{
+					color: '#fff',
+					display: 'flex',
+					alignItems: 'center',
+					paddingLeft: 100,
+				}}
+			>
+				<Grid
+					container
+					spacing={2}
+					pl={2}
+					sx={{
+						flexDirection: 'row',
+					}}
+				>
+					<Grid item={true} sm={4}>
+						<Box>
+							<MainLogo variant />
+							<Text style={{ marginLeft: 0 }}>
+								Amet minim mollit non deserunt ullamc est sit aliqua dolor amet
+								sint. Amet minim mollit non deserunt ullamco est sit aliqua.
+							</Text>
+						</Box>
+						<Box sx={{ textAlign: 'center' }}>
+							<IconButton
+								href='https://www.facebook.com/'
+								aria-label='upload picture'
+								target={'_blank'}
+								style={{ color: '#fff' }}
+							>
+								<Facebook />
+							</IconButton>
+							<IconButton
+								style={{ color: '#fff' }}
+								aria-label='upload picture'
+								target={'_blank'}
+								href='https://twitter.com/'
+							>
+								<Instagram />
+							</IconButton>
+						</Box>
+					</Grid>
 
-				<Grid item={true} sm={4}>
-					<ListItemButton href='services'>
-						<ListItemText sx={styles.title} primary='Services' />
-					</ListItemButton>
-					<ListItemButton href='#' style={styles.title}>
-						<ListItemText
-							sx={{
-								...styles.listBtn,
-							}}
-							primary='House Cleaning'
-						/>
-					</ListItemButton>
-					<ListItemButton href='#'>
-						<ListItemText sx={styles.listBtn} primary='Office Cleaning' />
-					</ListItemButton>
-					<ListItemButton href='#'>
-						<ListItemText sx={styles.listBtn} primary='Window Cleaning' />
-					</ListItemButton>
-					<ListItemButton href='#'>
-						<ListItemText sx={styles.listBtn} primary='Floor Cleaning' />
-					</ListItemButton>
+					{footerMenu.map((elem, i) => (
+						<Grid key={`FooterList-${i}`} item={true} sm={2.5} sx={{}}>
+							<FooterList
+								title={elem.title}
+								menus={elem.menus}
+								link={elem.menus[i].link}
+							/>
+						</Grid>
+					))}
 				</Grid>
 			</Grid>
-		</Grid>
+			<Box
+				sx={{
+					padding: 2,
+					display: 'flex',
+					justifyContent: 'center',
+					color: '#fff',
+				}}
+			>
+				Copyright by
+				<span style={{ textTransform: 'uppercase' }}>
+					{CONSTANTS.mainTitle}
+				</span>
+				@ {new Date().getFullYear()}. All rights reserved
+			</Box>
+		</Box>
 	)
 }
 
