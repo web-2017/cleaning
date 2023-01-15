@@ -1,11 +1,22 @@
-import React from 'react'
-import { Box, Button, Grid, useTheme } from '@mui/material'
+import { Box, Grid, useTheme } from '@mui/material'
 import { CalendarMonthOutlined } from '@mui/icons-material'
 
-import { roboto } from '../../utils/theme'
 import { CustomImage, Title, CustomButton } from '@/ui'
 
 const styles = {
+	container: {
+		position: 'relative',
+		'&:before': {
+			content: '""',
+			position: 'absolute',
+			top: 0,
+			left: 0,
+			background: 'linear-gradient(-45deg, #bfedfd, #fff, #fff, #bfedfd)',
+			width: '100%',
+			height: '100%',
+			zIndex: -1
+		}
+	},
 	wrapper: {
 		display: 'flex',
 		justifyContent: 'center',
@@ -19,13 +30,7 @@ const styles = {
 export const Hero = () => {
 	const theme = useTheme()
 	return (
-		<Grid
-			container
-			style={{
-				// background: 'linear-gradient(-45deg, #bfedfd, #fff, #fff, #bfedfd)',
-				background: 'url(/bg/bg-hero.png) top left no-repeat',
-			}}
-		>
+		<Grid container sx={styles.container}>
 			<Grid item={true} xs={12} md={6} style={styles.wrapper}>
 				<Box sx={{ width: { xs: '100%', md: '400px' } }}>
 					<Title variant='h3' size={20} pb={2}>

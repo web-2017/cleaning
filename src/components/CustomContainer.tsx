@@ -19,10 +19,12 @@ export const CustomContainer: FC<PropsWithChildren<HeaderType>> = ({
 	return (
 		<>
 			<CssBaseline />
-			<Container {...props} maxWidth='lg'>
+			<Container {...props} maxWidth='lg' >
 				<Header title={title} description={description} keywords={keywords} />
 				<ResponsiveAppBar />
-				<main className={''}>
+				<main className={''} style={{
+					background: 'url(/bg/bg-hero.png) top left no-repeat',
+				}}>
 					<Grid container spacing={2}>
 						{children}
 					</Grid>
