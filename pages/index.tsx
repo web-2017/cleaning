@@ -12,14 +12,9 @@ import Portfolio from '@/components/home/Portfolio'
 import Awards from '@/components/home/Awards'
 import { Customers } from '@/components/home/Customers'
 import News from '../src/components/home/News'
+import { SEO } from 'src/seo/SEO'
 
 const inter = Inter({ subsets: ['latin'] })
-
-interface UserProps {
-	name: string
-	lastName: string
-	location: string
-}
 
 export default function Home() {
 	const [data, setData] = useState<UserProps>()
@@ -38,12 +33,16 @@ export default function Home() {
 	}
 
 	return (
-		<CustomContainer title='Home page'>
+		<CustomContainer
+			title={SEO.mainPage.title}
+			description={SEO.mainPage.description}
+			keywords={SEO.mainPage.keywords}
+		>
 			<Hero />
 			<Brand />
 			<SectionAbout />
 			<Services />
-			<OurTeam />
+			{/* <OurTeam /> */}
 			<Portfolio />
 			<Awards />
 			<Customers />
