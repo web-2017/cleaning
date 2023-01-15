@@ -4,15 +4,15 @@ import { CustomCard, CustomImage, TitleSubtitle } from '@/ui'
 
 const fakePorfolioData = [
     {
-        src: '/other/porfolio.png',
+        src: '/other/portfolio1.jpg',
         alt: 'recent work'
     },
     {
-        src: '/other/porfolio.png',
+        src: '/other/portfolio2.jpg',
         alt: 'recent work'
     },
     {
-        src: '/other/porfolio.png',
+        src: '/other/portfolio3.jpg',
         alt: 'recent work'
     }
 ]

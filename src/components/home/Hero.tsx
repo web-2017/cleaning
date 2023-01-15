@@ -43,7 +43,7 @@ export const Hero = () => {
 						sunt nostrud amet.
 					</p>
 					<CustomButton
-						variant='contained'
+						variant='outlined'
 						text='Get a Quote'
 						startIcon={<CalendarMonthOutlined />}
 					/>
