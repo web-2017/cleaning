@@ -57,9 +57,9 @@ const Awards = () => {
 
 	return (
 		<Grid
-			container
-			spacing={2}
+			item={true}
 			mb={5}
+			xs={12}
 			style={{
 				backgroundColor: COLORS.blue,
 				height: 165,

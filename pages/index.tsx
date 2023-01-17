@@ -17,20 +17,14 @@ import { SEO } from 'src/seo/SEO'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-	const [data, setData] = useState<UserProps>()
-
-	useEffect(() => {
-		getData()
-	}, [])
-
-	const getData = async () => {
-		fetch('http://localhost:3000/api/user')
-			.then((js) => js.json())
-			.then((data) => {
-				setData(data)
-			})
-			.catch((err) => console.error(err))
-	}
+	// const getData = async () => {
+	// 	fetch('http://localhost:3000/api/user')
+	// 		.then((js) => js.json())
+	// 		.then((data) => {
+	// 			setData(data)
+	// 		})
+	// 		.catch((err) => console.error(err))
+	// }
 
 	return (
 		<CustomContainer

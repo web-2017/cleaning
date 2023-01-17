@@ -1,9 +1,5 @@
 import { FC, PropsWithChildren } from 'react'
-import {
-	Container,
-	CssBaseline,
-	Grid,
-} from '@mui/material'
+import { Container, CssBaseline, Grid } from '@mui/material'
 
 import { Header, HeaderType } from './Header'
 import ResponsiveAppBar from './AppBar'
@@ -19,14 +15,16 @@ export const CustomContainer: FC<PropsWithChildren<HeaderType>> = ({
 	return (
 		<>
 			<CssBaseline />
-			<Container {...props} maxWidth='lg' >
+			<Container {...props}>
 				<Header title={title} description={description} keywords={keywords} />
 				<ResponsiveAppBar />
-				<main style={{
-					background: 'url(/bg/bg-hero.png) top left no-repeat',
-					minHeight: '60vh',
-					overflowX: 'auto'
-				}}>
+				<main
+					style={{
+						background: 'url(/bg/bg-hero.png) top left no-repeat',
+						minHeight: '60vh',
+						overflowX: 'auto',
+					}}
+				>
 					<Grid container spacing={2}>
 						<Grid item={true} sm={12}>
 							{children}

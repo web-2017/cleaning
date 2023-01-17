@@ -22,10 +22,7 @@ const Footer = () => {
 	const theme = useTheme()
 
 	const CssTextField = styled((props: TextFieldProps) => (
-		<TextField
-			InputProps={{ disableUnderline: true } as Partial<OutlinedInputProps>}
-			{...props}
-		/>
+		<TextField {...props} />
 	))(({ theme }) => ({
 		'& label.Mui-focused': {
 			color: '#fff',

@@ -95,7 +95,7 @@ export const Customers = () => {
 	}
 	return (
 		<Grid container spacing={2}>
-			<Grid sm={12} mt={5} mb={10}>
+			<Grid item={true} sm={12} mt={5} mb={10}>
 				<TitleSubtitle
 					mb={10}
 					title='WHAT OUR CUSTOMERS SAY'

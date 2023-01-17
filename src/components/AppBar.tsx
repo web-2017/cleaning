@@ -17,9 +17,9 @@ import { useTheme } from '@mui/material/styles'
 import Image from 'next/image'
 import { CustomImage } from './ui/CustomImage'
 import { MainLogo } from './MainLogo'
-
-const pages = ['HOME', 'about', 'Pricing', 'service', 'Contacts']
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
+import { CONSTANTS } from 'src/utils/constants'
+import { CustomButton } from './ui'
+import { COLORS } from '../utils/COLORS'
 
 function ResponsiveAppBar() {
 	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
@@ -111,9 +111,9 @@ function ResponsiveAppBar() {
 								display: { xs: 'block', md: 'none' },
 							}}
 						>
-							{pages.map((page) => (
-								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign='center'>{page}</Typography>
+							{CONSTANTS.mainMenu.map((page) => (
+								<MenuItem key={page.id} onClick={handleCloseNavMenu}>
+									<Typography textAlign='center'>{page.link}</Typography>
 								</MenuItem>
 							))}
 						</Menu>
@@ -144,18 +144,22 @@ function ResponsiveAppBar() {
 							display: { xs: 'none', md: 'flex' },
 						}}
 					>
-						{pages.map((page) => (
-							<Button
-								key={page}
+						{CONSTANTS.mainMenu.map((page) => (
+							<CustomButton
+								variant='text'
+								href={page.link === 'home' ? (page.href = '/') : page.href}
+								linkStyle={{ color: theme.palette.text.primary }}
+								key={page.id}
 								onClick={handleCloseNavMenu}
 								sx={{
 									my: 2,
 									color: text.primary,
 									display: 'block',
 								}}
+								text={page.link}
 							>
 								{page}
-							</Button>
+							</CustomButton>
 						))}
 					</Box>
 

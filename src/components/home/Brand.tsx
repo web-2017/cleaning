@@ -16,7 +16,7 @@ export const Brand = () => {
 	return (
 		<>
 			<Grid
-				item
+				item={true}
 				md={4}
 				sm={12}
 				style={{ paddingLeft: 0, marginBottom: 10, marginTop: 10 }}
@@ -33,7 +33,7 @@ export const Brand = () => {
 				alignItems='center'
 				style={{ backgroundColor: COLORS.blue }}
 			>
-				<Grid item xs={2}>
+				<Grid item={true} xs={2}>
 					<Box sx={{ textAlign: 'center' }}>
 						{/* <Google style={{ color: '#fff', fontSize: 30 }} /> */}
 						<CustomImage
@@ -44,22 +44,22 @@ export const Brand = () => {
 						/>
 					</Box>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item={true} xs={2}>
 					<Box sx={{ textAlign: 'center' }}>
 						<Apple style={{ color: '#fff', fontSize: 30 }} />
 					</Box>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item={true} xs={2}>
 					<Box sx={{ textAlign: 'center' }}>
 						<YouTube style={{ color: '#fff', fontSize: 30 }} />
 					</Box>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item={true} xs={2}>
 					<Box sx={{ textAlign: 'center' }}>
 						<Pinterest style={{ color: '#fff', fontSize: 30 }} />
 					</Box>
 				</Grid>
-				<Grid item xs={2}>
+				<Grid item={true} xs={2}>
 					<Box sx={{ textAlign: 'center' }}>
 						<Facebook style={{ color: '#fff', fontSize: 30 }} />
 					</Box>

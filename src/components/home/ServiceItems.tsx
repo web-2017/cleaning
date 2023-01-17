@@ -13,6 +13,7 @@ const ServiceItems = () => {
 	return (
 		<>
 			<Grid
+				item={true}
 				sm={6}
 				md={4}
 				lg={3}
@@ -77,6 +78,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
+				item={true}
 				sm={6}
 				md={4}
 				lg={3}
@@ -142,6 +144,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
+				item={true}
 				sm={6}
 				md={4}
 				lg={3}
@@ -207,6 +210,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
+				item={true}
 				sm={6}
 				md={4}
 				lg={3}
@@ -272,6 +276,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
+				item={true}
 				sm={6}
 				md={4}
 				lg={3}
@@ -337,6 +342,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
+				item={true}
 				sm={6}
 				md={4}
 				lg={3}
@@ -401,6 +407,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
+				item={true}
 				sm={6}
 				md={4}
 				lg={3}
@@ -469,6 +476,7 @@ const ServiceItems = () => {
 				</Paper>
 			</Grid>
 			<Grid
+				item={true}
 				sm={6}
 				md={4}
 				lg={3}
