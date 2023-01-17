@@ -1,17 +1,16 @@
+import { IServices } from '@/types';
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type UserProps = {
-	name: string
-	lastName: string
-	location: string
-}
+
+
+
 
 export default function handler(
 	req: NextApiRequest,
-	res: NextApiResponse<UserProps>
+	res: NextApiResponse<IServices>
 ) {
 	res
 		.status(200)
-		.json({ name: 'John Doe', lastName: 'Marcus', location: 'Chicago' })
+		.json({ id: 1, title: 'John Doe', content: 'asdfasdf', category: ['home'] })
 }

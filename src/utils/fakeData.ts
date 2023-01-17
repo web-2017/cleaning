@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+import { IServices } from '@/types';
 export const newsData = [
 	{
 		id: 1,
@@ -113,4 +115,156 @@ export const footerMenu = [
 			},
 		],
 	},
+]
+
+export const servicesData: IServices[] = [
+	{
+		id: uuidv4(),
+		title: 'Hose cleaning',
+		category: ['home'],
+		content: [
+			{
+				id: uuidv4(),
+				title: 'House cleaning',
+				services: [
+					'Dust surfaces', 'Dust and hand wipe furniture tops',
+					'Dust baseboards, chair rails, and door panels',
+					'Dust ceiling fans(within reach)',
+					'Vacuum carpets',
+					'Vacuum and damp mop floors',
+					'Dust blinds, window sills, and lock ledges',
+					'Dust furniture',
+					'Dust pictures frames',
+					'Dust lamp and lamp shades',
+					'Dust and clean mirrors',
+					'Empty all trash',
+					'Cleaning and sanitizing the laundry rooms and the machines',
+				]
+			},
+			{
+				id: uuidv4(),
+				title: 'Bathrooms',
+				services: [
+					'Dust surfaces',
+					'Dust blinds, window sills, and lock ledges',
+					'Dust cabinets, door panels, and baseboards',
+					'Clean and disinfect surfaces',
+					'Spot clean cabinet fronts',
+					'Clean, disinfect, and shine showers and tubs',
+					'Clean and disinfect toilets inside and out',
+					'Clean and disinfect door knobs and switch plates',
+					'Shine fixtures',
+					'Vacuum and damp mop floors',
+					'Empty trash'
+				]
+			},
+			{
+				id: uuidv4(),
+				title: 'Kitchen',
+				services: [
+					'Dust surfaces',
+					'Dust blinds, window sills, and lock ledges',
+					'Dust chair rails, cabinets, door panels, and baseboards',
+					'Dust top of refrigerator',
+					'Clean and disinfect counter tops',
+					'Spot clean cabinet fronts',
+					'Clean and disinfect door knobs and switch plates',
+					'Clean and disinfect sink',
+					'Clean and disinfect microwave inside and out',
+					'Clean, disinfect, and shine outside of oven and top of range',
+					'Empty trash',
+					'Clean, disinfect, and shine outside of dishwasher',
+					'Clean, disinfect, and shine outside of refrigerator',
+					'Clean and disinfect kitchen table',
+					'Vacuum and damp mop floors',
+					'Empty trash',
+				]
+			},
+			{
+				id: uuidv4(),
+				title: 'Bedrooms',
+				services: [
+					'Dust surfaces',
+					'Dust and hand wipe furniture tops',
+					'Dust furniture',
+					'Dust baseboards, chair rails, and door panels',
+					'Dust blinds, window sills, and lock ledges',
+					'Vacuum carpets',
+					'Vacuum and damp mop floors (if non-carpet)',
+					'Change sheets (upon request)',
+					'Make beds (upon request)',
+					'Empty trash',
+				]
+			}
+		],
+	},
+	{
+		id: uuidv4(),
+		title: 'Office Cleaning',
+		category: ['office'],
+		content: [
+			{
+				id: uuidv4(),
+				title: 'Reception / Common Area',
+				services: [
+					'Straighten entryway mats',
+					'Clean front door / window glass inside and out',
+					'Dust receptions area tables, countertops and all hard surfaces',
+					'Vacuum all carpet and upholstered furniture',
+					'Sweep all hard surface flooring',
+					'Wipe down / disinfect all phones',
+					'Empty all trash cans, replace liners',
+				]
+			},
+			{
+				id: uuidv4(),
+				title: 'Conference Room',
+				services: [
+					'Dust filing cabinets, tanle, countertops, bookshelves and all hard surfaces',
+					'Vacuum all carpet and sweep hard surface flooring',
+					'Vacuum upholstered furniture',
+					'Dust table, countertops and all flat surfaces',
+					'Wipe down / disinfect all phones',
+					'Empty all trash cans, replace liners',
+				]
+			},
+			{
+				id: uuidv4(),
+				title: 'Restroom(s)',
+				services: [
+					'Clean / disinfect all hard surfaces (countertops, fixtures, mirrors, sinks)',
+					'Sweep / mop hard surface flooring',
+					'Wipe / disinfect stall partitions',
+					'Clean / disinfect urinals and toilets',
+					'Refill all paper products and soap dispensers',
+					'Test hand dryers, if not working report to maintenance',
+					'Empty all trash cans, replace liners',
+				]
+			},
+			{
+				id: uuidv4(),
+				title: 'Break Room',
+				services: [
+					'Wipe / disinfect all hard surfaces (table, countertops, refrigerator, cabinets)',
+					'Sweep / mop hard suraface flooring',
+					'Wipe / disinfect outside and instide of microwave',
+					'Straighten items on countertop',
+					'Refll paper products and soap dispenser as needed',
+					'Empty all trash cans, replace liners',
+				],
+			},
+			{
+				id: uuidv4(),
+				title: 'Inner Offices / Cubicles',
+				services: [
+					'Dust filing cabinets, tablesm countertops, bookshelves and all hard surfaces',
+					'Vacuum all carpet and sweep hard surface flooring',
+					'Dust desks, countertops and all flat surfaces',
+					'Dust all computer areas (fax machines, copiers)',
+					'Wipe down / disinfect all phones',
+					'Empty all trash cans, replace liners',
+				],
+			}
+		],
+	}
 ]
