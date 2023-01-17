@@ -22,11 +22,15 @@ export const CustomContainer: FC<PropsWithChildren<HeaderType>> = ({
 			<Container {...props} maxWidth='lg' >
 				<Header title={title} description={description} keywords={keywords} />
 				<ResponsiveAppBar />
-				<main className={''} style={{
+				<main style={{
 					background: 'url(/bg/bg-hero.png) top left no-repeat',
+					minHeight: '60vh',
+					overflowX: 'auto'
 				}}>
 					<Grid container spacing={2}>
-						{children}
+						<Grid item={true} sm={12}>
+							{children}
+						</Grid>
 					</Grid>
 				</main>
 				<Footer />
