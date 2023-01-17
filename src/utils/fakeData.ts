@@ -266,5 +266,22 @@ export const servicesData: IServices[] = [
 				],
 			}
 		],
+	},
+	{
+		id: uuidv4(),
+		title: 'Stairways Cleaning',
+		category: ['home'],
+		content: [
+			{
+				id: uuidv4(),
+				title: 'Stairways Cleaning',
+				services: [
+					'Vacuuming and mopping the stairs',
+					'Wiping the frames/baseboards/common doors/windows and walls',
+					'Cleaning and sanitizing the tile floors by the entrances and removing all waste and unwanted mail papers from the floors',
+					'Cleaning and sanitizing the laundry rooms and the machines',
+				]
+			},
+		],
 	}
 ]
