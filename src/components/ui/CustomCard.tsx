@@ -42,13 +42,11 @@ export const CustomCard = ({
 	cardTextStyle,
 	showDate,
 }: CustomCardType) => {
+	// const [date, setDate] = useState<Date>()
 
-	const [date, setDate] = useState<Date>()
-
-	useEffect(() => {
-		setDate(new Date())
-	}, [])
-
+	// useEffect(() => {
+	// 	setDate(new Date())
+	// }, [])
 
 	return (
 		<Card sx={{ maxWidth: width }} style={style}>
@@ -96,7 +94,8 @@ export const CustomCard = ({
 								borderRadius: 0.6,
 							}}
 						>
-							{date?.toLocaleDateString()}
+							{/* {date?.toLocaleDateString()} */}
+							2023
 						</Box>
 					)}
 				</Box>

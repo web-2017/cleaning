@@ -143,7 +143,8 @@ const Footer = () => {
 				<span style={{ textTransform: 'uppercase' }}>
 					{CONSTANTS.mainTitle}
 				</span>
-				@ {new Date().getFullYear()}. All rights reserved
+				@ 2023. All rights reserved
+				{/* @ {date}. All rights reserved */}
 			</Box>
 		</Box>
 	)

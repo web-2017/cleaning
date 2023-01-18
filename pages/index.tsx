@@ -25,12 +25,18 @@ export default function Home() {
 	// 		})
 	// 		.catch((err) => console.error(err))
 	// }
+	// const [date, setDate] = useState<Date>()
+
+	// useEffect(() => {
+	// 	setDate(new Date())
+	// }, [])
 
 	return (
 		<CustomContainer
 			title={SEO.mainPage.title}
 			description={SEO.mainPage.description}
 			keywords={SEO.mainPage.keywords}
+			// date={date}
 		>
 			<Hero />
 			<Brand />

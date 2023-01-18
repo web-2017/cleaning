@@ -1,12 +1,13 @@
 import { FC, PropsWithChildren, CSSProperties } from 'react'
 import { useTheme } from '@mui/material/styles'
 import { Typography } from '@mui/material'
+import { Variant } from '@mui/material/styles/createTypography'
 
 type TitleType = {
 	style?: CSSProperties
 	color?: any
 	size?: number
-	variant?: string
+	variant?: Variant
 	bold?: boolean
 }
 
