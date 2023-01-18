@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useState, useEffect } from 'react'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
@@ -42,6 +42,14 @@ export const CustomCard = ({
 	cardTextStyle,
 	showDate,
 }: CustomCardType) => {
+
+	const [date, setDate] = useState<Date>()
+
+	useEffect(() => {
+		setDate(new Date())
+	}, [])
+
+
 	return (
 		<Card sx={{ maxWidth: width }} style={style}>
 			{img && (
@@ -88,7 +96,7 @@ export const CustomCard = ({
 								borderRadius: 0.6,
 							}}
 						>
-							{new Date().toLocaleDateString()}
+							{date?.toLocaleDateString()}
 						</Box>
 					)}
 				</Box>
