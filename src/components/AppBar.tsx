@@ -14,12 +14,9 @@ import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import { useTheme } from '@mui/material/styles'
-import Image from 'next/image'
-import { CustomImage } from './ui/CustomImage'
 import { MainLogo } from './MainLogo'
 import { CONSTANTS } from 'src/utils/constants'
 import { CustomButton } from './ui'
-import { COLORS } from '../utils/COLORS'
 
 function ResponsiveAppBar() {
 	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
