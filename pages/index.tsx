@@ -14,29 +14,14 @@ import { Customers } from '@/components/home/Customers'
 import News from '../src/components/home/News'
 import { SEO } from 'src/seo/SEO'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-	// const getData = async () => {
-	// 	fetch('http://localhost:3000/api/user')
-	// 		.then((js) => js.json())
-	// 		.then((data) => {
-	// 			setData(data)
-	// 		})
-	// 		.catch((err) => console.error(err))
-	// }
-	// const [date, setDate] = useState<Date>()
-
-	// useEffect(() => {
-	// 	setDate(new Date())
-	// }, [])
-
 	return (
 		<CustomContainer
 			title={SEO.mainPage.title}
 			description={SEO.mainPage.description}
 			keywords={SEO.mainPage.keywords}
-		// date={date}
+			router={''}
 		>
 			<Hero />
 			<Brand />

@@ -1,9 +1,12 @@
 import { useState, useEffect, Fragment } from 'react'
+import { green, teal } from '@mui/material/colors';
 import {
 	Box,
+	Chip,
 	Grid,
 	Typography,
 } from '@mui/material'
+import { styled, useTheme, withStyles } from '@mui/material/styles'
 
 import { Inter } from '@next/font/google'
 
@@ -18,6 +21,7 @@ import styles from '@/styles/services/Services.module.css'
 
 const Services = () => {
 	const router = useRouter()
+
 
 	return (
 		<CustomContainer
@@ -45,7 +49,7 @@ const Services = () => {
 									>
 										{service.title}
 									</Title>
-									<Title variant='h6'>{service.contents[i].title}</Title>
+									<div><Chip style={{ background: teal[400], color: '#fff', margin: '20px 0' }} label={service.contents[i].title} variant="outlined" /></div>
 									{service.contents.map((elem, i) => {
 										return (
 											<div key={`service.contents-${i}`}>
