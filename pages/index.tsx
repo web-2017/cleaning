@@ -36,7 +36,7 @@ export default function Home() {
 			title={SEO.mainPage.title}
 			description={SEO.mainPage.description}
 			keywords={SEO.mainPage.keywords}
-			// date={date}
+		// date={date}
 		>
 			<Hero />
 			<Brand />

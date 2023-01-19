@@ -5,6 +5,10 @@ import Typography from '@mui/material/Typography'
 import HomeIcon from '@mui/icons-material/Home'
 
 export const CustomBreadcrumbs = ({ router }) => {
+
+	if (!router) {
+		return null
+	}
 	return (
 		<Box
 			sx={{

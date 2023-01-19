@@ -39,6 +39,9 @@
 			],
 			"@/types": [
 				"./types/index.ts"
+			],
+			"@/styles/*": [
+				"/styles/*"
 			]
 		}
 	},

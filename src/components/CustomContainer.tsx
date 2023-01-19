@@ -1,14 +1,21 @@
 import { FC, PropsWithChildren } from 'react'
 import { Container, CssBaseline, Grid } from '@mui/material'
+import { NextRouter } from 'next/router'
 
 import { Header, HeaderType } from './Header'
 import ResponsiveAppBar from './AppBar'
 import Footer from './Footer/Footer'
+import { CustomBreadcrumbs } from '@/ui'
 
-export const CustomContainer: FC<PropsWithChildren<HeaderType>> = ({
+interface ICustomContainerProps extends HeaderType {
+	router: NextRouter
+}
+
+export const CustomContainer: FC<PropsWithChildren<ICustomContainerProps>> = ({
 	title,
 	description,
 	keywords,
+	router,
 	children,
 	...props
 }) => {
@@ -27,6 +34,7 @@ export const CustomContainer: FC<PropsWithChildren<HeaderType>> = ({
 				>
 					<Grid container spacing={2}>
 						<Grid item={true} sm={12}>
+							<CustomBreadcrumbs router={router} />
 							{children}
 						</Grid>
 					</Grid>
