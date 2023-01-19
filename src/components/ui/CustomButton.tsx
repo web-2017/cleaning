@@ -15,6 +15,7 @@ type CustomButtonType = {
 	size?: number
 	variant?: VariantType
 	disabled?: boolean
+	onClick: (param?: any) => void
 }
 
 export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
@@ -27,6 +28,7 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 	style,
 	variant,
 	disabled,
+	onClick,
 }) => {
 	return (
 		<Button
@@ -36,6 +38,7 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 			variant={variant}
 			style={style}
 			disabled={disabled}
+			onClick={onClick}
 		>
 			{href ? (
 				<Link

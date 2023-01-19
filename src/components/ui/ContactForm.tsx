@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField'
 import emailjs from '@emailjs/browser'
 import { Link } from '@mui/material'
 
-import { CustomAlert } from './CustomAlert'
+import { CustomAlertField } from './CustomAlertField'
 import { CONSTANTS } from '@/utils'
 import { CustomButton } from './CustomButton'
 
@@ -12,11 +12,14 @@ export const ContactForm = () => {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [phone, setPhone] = useState('')
-	const [message, setMessage] = useState('')
+	const [textarea, setTextarea] = useState('')
 	const [open, setOpen] = useState(false)
-	const sendEmail = (e) => {
+
+	const sendEmail = (e: any) => {
 		e.preventDefault()
-		if (!email || !phone || !message) {
+		console.log(1)
+
+		if (!email && !phone && textarea.length < 5) {
 			setOpen(true)
 			return
 		} else {
@@ -25,7 +28,7 @@ export const ContactForm = () => {
 				name,
 				email,
 				phone,
-				message,
+				message: textarea,
 			}
 
 			emailjs
@@ -44,7 +47,7 @@ export const ContactForm = () => {
 							setName('')
 							setEmail('')
 							setPhone('')
-							setMessage('')
+							setTextarea('')
 							alert('Success, See you soon')
 						} else {
 							alert('Oops, something was wrong! please try again or call me')
@@ -52,7 +55,7 @@ export const ContactForm = () => {
 					},
 					(error) => {
 						setOpen(false)
-						console.log(error.text)
+						console.log(error?.text)
 					}
 				)
 		}
@@ -88,7 +91,7 @@ export const ContactForm = () => {
 				</Typography>
 			</Grid>
 
-			{open && <CustomAlert setOpen={setOpen} title='Error' />}
+			{open && <CustomAlertField setOpen={setOpen} title='Error' />}
 			<Grid item={true} xs={12} sm={6} md={6}>
 				<TextField
 					label='Name'
@@ -123,10 +126,10 @@ export const ContactForm = () => {
 					fullWidth
 					required
 					label='Message'
-					value={message}
+					value={textarea}
 					onChange={(e) => {
 						// console.log(newValue?.toLocaleTimeString())
-						setMessage(e.target.value)
+						setTextarea(e.target.value)
 					}}
 				/>
 			</Grid>
@@ -140,7 +143,7 @@ export const ContactForm = () => {
 				<CustomButton
 					text='Send'
 					variant='contained'
-					disabled={!email && !phone && !message}
+					disabled={!email && !phone && !textarea}
 					onClick={(e) => sendEmail(e)}
 					color='success'
 				/>

@@ -6,19 +6,19 @@ import CloseIcon from '@mui/icons-material/Close'
 
 type kindOfError = 'error' | 'success'
 
-type CustomAlertType = {
-	setOpen: (param: boolean) => boolean
+type CustomAlertFieldType = {
+	setOpen: (param?: boolean) => void
 	title: string
 	kindOfError: kindOfError
 	text: string
 }
 
-export const CustomAlert = ({
+export const CustomAlertField = ({
 	setOpen,
 	title = '',
 	kindOfError = 'error',
 	text = 'All fields are required!',
-}: CustomAlertType) => {
+}: CustomAlertFieldType) => {
 	return (
 		<Stack sx={{ width: '100%' }} spacing={2}>
 			<Alert
@@ -36,8 +36,8 @@ export const CustomAlert = ({
 					</IconButton>
 				}
 			>
-				<AlertTitle>{title}</AlertTitle>
 				{text}
+				{/* <AlertTitle>{title}</AlertTitle> */}
 			</Alert>
 		</Stack>
 	)
