@@ -4,8 +4,8 @@ import { Box, Grid } from '@mui/material'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 
-import { CustomImage, Title, Text, CustomButton } from '@/ui'
-import { COLORS } from '@/utils'
+import { Title, Text, CustomButton } from '@/ui'
+import { COLORS, itemData } from '@/utils'
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
 	return {
@@ -48,7 +48,6 @@ export const SectionAbout = () => {
 			</Grid>
 			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
 				<ImageList
-					// sx={{ width: 500, height: 450, }}
 					variant='quilted'
 					cols={4}
 					rowHeight={150}
@@ -72,29 +71,4 @@ export const SectionAbout = () => {
 	)
 }
 
-const itemData = [
-	{
-		img: '/other/Rectangle 8.png',
-		title: 'Burger',
-		rows: 2,
-		cols: 2,
-	},
-	{
-		img: '/other/Rectangle 9.png',
-		title: 'Burger',
-		rows: 1,
-		cols: 2,
-	},
-	{
-		img: '/other/Rectangle 10.png',
-		title: 'Camera',
-		rows: 2,
-		cols: 2,
-	},
-	{
-		img: '/other/Rectangle 11.png',
-		title: 'Coffee',
-		rows: 1,
-		cols: 2,
-	},
-]
+

@@ -1,19 +1,13 @@
-import { useState, useEffect, Fragment } from 'react'
-import { green, teal } from '@mui/material/colors';
+import { teal } from '@mui/material/colors';
 import {
 	Box,
 	Chip,
 	Grid,
-	Typography,
 } from '@mui/material'
-import { styled, useTheme, withStyles } from '@mui/material/styles'
-
-import { Inter } from '@next/font/google'
-
 
 import { CustomContainer } from '@/components/CustomContainer'
 import { Title } from '@/ui'
-import { COLORS, servicesData } from '@/utils'
+import { servicesData } from '@/utils'
 import { SEO } from 'src/seo/SEO'
 import { useRouter } from 'next/router'
 import { ServiceItem } from './ServiceItem'

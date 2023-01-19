@@ -1,6 +1,33 @@
 import { v4 as uuidv4 } from 'uuid'
 import { IServices } from '@/types'
 
+export const itemData = [
+	{
+		img: '/other/Rectangle 8.png',
+		title: 'Burger',
+		rows: 2,
+		cols: 2,
+	},
+	{
+		img: '/other/Rectangle 9.png',
+		title: 'Burger',
+		rows: 1,
+		cols: 2,
+	},
+	{
+		img: '/other/Rectangle 10.png',
+		title: 'Camera',
+		rows: 2,
+		cols: 2,
+	},
+	{
+		img: '/other/Rectangle 11.png',
+		title: 'Coffee',
+		rows: 1,
+		cols: 2,
+	},
+]
+
 export const newsData = [
 	{
 		id: 1,
