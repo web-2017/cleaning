@@ -224,6 +224,11 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     "to-fast-properties" "^2.0.0"
 
+"@emailjs/browser@^3.10.0":
+  "integrity" "sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg=="
+  "resolved" "https://registry.npmjs.org/@emailjs/browser/-/browser-3.10.0.tgz"
+  "version" "3.10.0"
+
 "@emotion/babel-plugin@^11.10.5":
   "integrity" "sha512-xE7/hyLHJac7D2Ve9dKroBBZqBT7WuPQmWcq7HSGb84sUuP4mlOWoB8dvVfD9yk5DHkU1m6RW7xSoDtnQHNQeA=="
   "resolved" "https://registry.npmjs.org/@emotion/babel-plugin/-/babel-plugin-11.10.5.tgz"
@@ -548,9 +553,9 @@
   "resolved" "https://registry.npmjs.org/@next/font/-/font-13.1.1.tgz"
   "version" "13.1.1"
 
-"@next/swc-win32-x64-msvc@13.1.1":
-  "integrity" "sha512-mVF0/3/5QAc5EGVnb8ll31nNvf3BWpPY4pBb84tk+BfQglWLqc5AC9q1Ht/YMWiEgs8ALNKEQ3GQnbY0bJF2Gg=="
-  "resolved" "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-13.1.1.tgz"
+"@next/swc-darwin-x64@13.1.1":
+  "integrity" "sha512-qWr9qEn5nrnlhB0rtjSdR00RRZEtxg4EGvicIipqZWEyayPxhUu6NwKiG8wZiYZCLfJ5KWr66PGSNeDMGlNaiA=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-13.1.1.tgz"
   "version" "13.1.1"
 
 "@nodelib/fs.scandir@2.1.5":

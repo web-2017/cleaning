@@ -10,7 +10,6 @@ import { Inter } from '@next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-
 interface ICustomContainerProps extends HeaderType {
 	router: NextRouter
 }
@@ -26,13 +25,18 @@ export const CustomContainer: FC<PropsWithChildren<ICustomContainerProps>> = ({
 	return (
 		<>
 			<CssBaseline />
-			<Container {...props}>
+			<Container
+				{...props}
+				style={{
+					background: 'url(/bg/bg-hero.png) top left no-repeat',
+					// backgroundAttachment: 'fixed',
+				}}
+			>
 				<Header title={title} description={description} keywords={keywords} />
 				<ResponsiveAppBar />
 				<main
 					className={inter.className}
 					style={{
-						background: 'url(/bg/bg-hero.png) top left no-repeat',
 						minHeight: '60vh',
 						overflowX: 'auto',
 					}}

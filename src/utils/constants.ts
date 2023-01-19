@@ -33,6 +33,12 @@ export const CONSTANTS = {
 			href: 'contacts',
 		},
 	],
+	company: {
+		name: 'Cleanexis',
+		phone: '+1 233 3333333',
+		address:
+			'Park Ridge, Skokie/Linkolnwood, Evanston, Winnetka, Barrington, Shaumburg, Oak Brook, Norridge/Rosemont, Northside Chicago, Lincoln Park',
+	},
 	phone: {
 		primary: '+1 233 3333333',
 		secondary: '+1 233 3333333',

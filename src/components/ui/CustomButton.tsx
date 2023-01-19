@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FC, CSSProperties } from 'react'
 import { COLORS } from '../../utils/COLORS'
 
-type VariantType = "text" | "outlined" | "contained"
+type VariantType = 'text' | 'outlined' | 'contained'
 
 type CustomButtonType = {
 	text?: string
@@ -14,6 +14,7 @@ type CustomButtonType = {
 	style?: CSSProperties
 	size?: number
 	variant?: VariantType
+	disabled?: boolean
 }
 
 export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
@@ -24,10 +25,18 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 	href,
 	linkStyle,
 	style,
-	variant
+	variant,
+	disabled,
 }) => {
 	return (
-		<Button size={size} startIcon={startIcon} endIcon={endIcon} variant={variant} style={style}>
+		<Button
+			size={size}
+			startIcon={startIcon}
+			endIcon={endIcon}
+			variant={variant}
+			style={style}
+			disabled={disabled}
+		>
 			{href ? (
 				<Link
 					style={{ textDecoration: 'none', color: COLORS.blue, ...linkStyle }}
