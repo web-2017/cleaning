@@ -3,6 +3,9 @@ import { Grid, Button, Typography, Box } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import emailjs from '@emailjs/browser'
 import { Link } from '@mui/material'
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
+import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 
 import { CustomAlertField } from './CustomAlertField'
 import { CONSTANTS } from '@/utils'
@@ -13,6 +16,7 @@ export const ContactForm = () => {
 	const [email, setEmail] = useState('')
 	const [phone, setPhone] = useState('')
 	const [textarea, setTextarea] = useState('')
+	const [date, setDate] = useState<Date>(new Date())
 	const [open, setOpen] = useState(false)
 
 	const sendEmail = (e: any) => {
@@ -29,6 +33,7 @@ export const ContactForm = () => {
 				email,
 				phone,
 				message: textarea,
+				date: new Intl.DateTimeFormat('en-US').format(date),
 			}
 
 			emailjs
@@ -48,6 +53,7 @@ export const ContactForm = () => {
 							setEmail('')
 							setPhone('')
 							setTextarea('')
+							setDate(new Date())
 							alert('Success, See you soon')
 						} else {
 							alert('Oops, something was wrong! please try again or call me')
@@ -109,7 +115,7 @@ export const ContactForm = () => {
 					fullWidth
 				/>
 			</Grid>
-			<Grid item={true} xs={12} sm={6} md={12}>
+			<Grid item={true} xs={12} sm={6}>
 				<TextField
 					required
 					label='Email'
@@ -117,6 +123,19 @@ export const ContactForm = () => {
 					onChange={(e) => setEmail(e.target.value)}
 					fullWidth
 				/>
+			</Grid>
+			<Grid item={true} xs={12} sm={6}>
+				<LocalizationProvider dateAdapter={AdapterDayjs}>
+					<DatePicker
+						label='Prefer date'
+						value={date}
+						minDate={new Date()}
+						onChange={(newValue) => {
+							setDate(newValue as Date)
+						}}
+						renderInput={(params) => <TextField {...params} />}
+					/>
+				</LocalizationProvider>
 			</Grid>
 
 			<Grid item={true} xs={12}>
