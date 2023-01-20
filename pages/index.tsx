@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { Inter } from '@next/font/google'
 
 import styles from '../styles/Home.module.css'
@@ -13,6 +12,7 @@ import Awards from '@/components/home/Awards'
 import { Customers } from '@/components/home/Customers'
 import News from '../src/components/home/News'
 import { SEO } from 'src/seo/SEO'
+import Tarifs from '@/components/home/Tarifs'
 
 
 export default function Home() {
@@ -27,6 +27,7 @@ export default function Home() {
 			<Brand />
 			<SectionAbout />
 			<Services />
+			<Tarifs />
 			{/* <OurTeam /> */}
 			<Portfolio />
 			<Awards />

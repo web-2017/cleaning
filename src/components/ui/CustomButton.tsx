@@ -6,7 +6,7 @@ import { COLORS } from '../../utils/COLORS'
 type VariantType = 'text' | 'outlined' | 'contained'
 
 type CustomButtonType = {
-	text?: string
+	text: string
 	startIcon?: any
 	endIcon?: any
 	href?: string
@@ -14,6 +14,7 @@ type CustomButtonType = {
 	style?: CSSProperties
 	size?: number
 	variant?: VariantType
+	bold?: boolean
 	disabled?: boolean
 	onClick: (param?: any) => void
 }
@@ -24,6 +25,7 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 	startIcon,
 	endIcon,
 	href,
+	bold,
 	linkStyle,
 	style,
 	variant,
@@ -36,9 +38,15 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 			startIcon={startIcon}
 			endIcon={endIcon}
 			variant={variant}
-			style={style}
+			style={{
+				fontWeight: bold ? 'bold' : 'normal',
+				borderWidth: variant === 'outlined' && bold ?
+					'3px' : '1px',
+				...style
+			}}
 			disabled={disabled}
 			onClick={onClick}
+
 		>
 			{href ? (
 				<Link

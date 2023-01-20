@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid'
-import { IServices } from '@/types'
+import { IServices, ITarif } from '@/types'
 
 export const itemData = [
 	{
@@ -404,4 +404,70 @@ export const servicesData: IServices[] = [
 	// 		},
 	// 	],
 	// },
+]
+
+export const fakeTarif: ITarif[] = [
+	{
+		id: 1,
+		tarif: 'Basic',
+		title: 'For individuals and teams getting started.',
+		subtitle: 'Everything we can do to empower you to creating awesome content.',
+		lists: [
+			{
+				item: 'Single user licence with one workspace'
+			},
+			{
+				item: 'Access to your individual asset library'
+			},
+			{
+				item: 'Access to standard templates'
+			},
+			{
+				item: 'Export content as PNG, PDF and MP4'
+			},
+		]
+
+	},
+	{
+		id: 2,
+		tarif: 'Premium',
+		title: 'For individuals and teams getting started.',
+		subtitle: 'Includes',
+		lists: [
+			{
+				item: 'Single user licence with one workspace'
+			},
+			{
+				item: 'Access to your individual asset library'
+			},
+			{
+				item: 'Access to standard templates'
+			},
+			{
+				item: 'Export content as PNG, PDF and MP4'
+			},
+		]
+
+	},
+	{
+		id: 3,
+		tarif: 'Enterprise',
+		title: 'For individuals and teams getting started.',
+		subtitle: 'Includes',
+		lists: [
+			{
+				item: 'Single user licence with one workspace'
+			},
+			{
+				item: 'Access to your individual asset library'
+			},
+			{
+				item: 'Access to standard templates'
+			},
+			{
+				item: 'Export content as PNG, PDF and MP4'
+			},
+		]
+
+	}
 ]
