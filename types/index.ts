@@ -1,6 +1,22 @@
-export interface IServices {
-	id: 1
+type IServicesType = {
+	id: string
 	title: string
-	contents: any[]
-	category: [string]
+	services: any[]
+}
+export interface IServices {
+	id: number
+	title: string
+	contents: IServicesType[]
+	category: string[]
+}
+
+export type IWeeklyServicesType = {
+	id: number
+	title: string
+	includes: boolean
+}
+export interface IWeeklyProgramData {
+	id: number
+	tariff: string
+	services: IWeeklyServicesType[]
 }
