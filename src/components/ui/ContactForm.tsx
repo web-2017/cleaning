@@ -11,7 +11,7 @@ import { CustomAlertField } from './CustomAlertField'
 import { CONSTANTS } from '@/utils'
 import { CustomButton } from './CustomButton'
 
-export const ContactForm = () => {
+export const ContactForm = ({ address }: { address?: boolean }) => {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [phone, setPhone] = useState('')
@@ -72,7 +72,7 @@ export const ContactForm = () => {
 			container
 			spacing={2}
 			maxWidth='sm'
-			style={{ display: 'flex', textAlign: 'center', margin: '100px auto' }}
+			style={{ display: 'flex', textAlign: 'center', margin: '20px' }}
 		>
 			<Grid
 				item={true}
@@ -80,6 +80,7 @@ export const ContactForm = () => {
 				alignContent='center'
 				justifyContent='center'
 				sx={{ textAlign: 'center' }}
+				sm={12}
 			>
 				<Typography mb={2} style={{ textAlign: 'center' }} variant='h4'>
 					Contacts
@@ -92,9 +93,7 @@ export const ContactForm = () => {
 				>
 					{CONSTANTS.phone.primary}
 				</Typography>
-				<Typography mt={2} style={{ textAlign: 'center' }} variant='h6'>
-					{CONSTANTS.company.address}
-				</Typography>
+
 			</Grid>
 
 			{open && <CustomAlertField setOpen={setOpen} title='Error' />}
@@ -152,6 +151,9 @@ export const ContactForm = () => {
 					}}
 				/>
 			</Grid>
+			{address && <Typography mt={2} style={{ textAlign: 'center' }} variant='h6'>
+				{CONSTANTS.company.address}
+			</Typography>}
 			<Grid
 				style={{ marginTop: '20px' }}
 				container

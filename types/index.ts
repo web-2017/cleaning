@@ -31,3 +31,10 @@ export interface ITarif {
 	subtitle: string
 	lists: any[]
 }
+
+export interface IModalProps {
+	open: boolean
+	setModal: (param?: boolean) => void
+	text: string
+	title: string
+}

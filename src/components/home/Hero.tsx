@@ -1,7 +1,10 @@
+import { useState } from 'react'
 import { Box, Grid, useTheme } from '@mui/material'
 import { CalendarMonthOutlined } from '@mui/icons-material'
 
 import { CustomImage, Title, CustomButton } from '@/ui'
+import { CustomModal } from '../ui/CustomModal'
+import { IModalProps } from '@/types'
 
 const styles = {
 	container: {
@@ -27,8 +30,21 @@ const styles = {
 	},
 }
 
-export const Hero = () => {
+interface IHero extends IModalProps {
+	setText: (param: string) => string
+	setTitle: (param: string) => string
+}
+
+export const Hero = ({ open, setModal, setTitle, setText }: IHero) => {
 	const theme = useTheme()
+
+	function handleClick() {
+		setModal(!open)
+		setTitle('Hero')
+		setText('asdfasd Hero')
+	}
+
+
 	return (
 		<Grid container sx={styles.container}>
 			<Grid item={true} xs={12} md={6} style={styles.wrapper}>
@@ -51,6 +67,7 @@ export const Hero = () => {
 						variant='outlined'
 						text='Get a Quote'
 						startIcon={<CalendarMonthOutlined />}
+						onClick={() => handleClick()}
 					/>
 				</Box>
 			</Grid>

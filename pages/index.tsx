@@ -13,17 +13,44 @@ import { Customers } from '@/components/home/Customers'
 import News from '../src/components/home/News'
 import { SEO } from 'src/seo/SEO'
 import Tarifs from '@/components/home/Tarifs'
+import { CustomModal } from '@/components/ui'
+import { useState } from 'react'
+
 
 
 export default function Home() {
+	const [open, setOpen] = useState(false)
+	const [text, setText] = useState('')
+	const [title, setTitle] = useState('')
+
+	const handleModal = () => {
+		setOpen(!open)
+
+	}
+	0.900000080
 	return (
 		<CustomContainer
 			title={SEO.mainPage.title}
 			description={SEO.mainPage.description}
 			keywords={SEO.mainPage.keywords}
+			setModal={setOpen}
+			open={open}
 			router={''}
 		>
-			<Hero />
+			<CustomModal
+				open={open}
+				setModal={handleModal}
+				text={text}
+				title={title}
+			/>
+			<Hero
+				open={open}
+				setModal={handleModal}
+				text={text}
+				title={title}
+				setText={setText}
+				setTitle={setTitle}
+			/>
 			<Brand />
 			<SectionAbout />
 			<Services />

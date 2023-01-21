@@ -4,6 +4,7 @@ import React from 'react'
 import { ContactForm } from '@/ui'
 import { CustomContainer } from '@/components/CustomContainer'
 import { SEO } from 'src/seo/SEO'
+import { Box } from '@mui/material'
 
 const Contacts = () => {
 	const router = useRouter()
@@ -14,7 +15,9 @@ const Contacts = () => {
 			keywords={SEO.contacts.keywords}
 			router={router}
 		>
-			<ContactForm />
+			<Box sx={{ display: 'flex', justifyContent: 'center', margin: '60px 0' }}>
+				<ContactForm address />
+			</Box>
 		</CustomContainer>
 	)
 }

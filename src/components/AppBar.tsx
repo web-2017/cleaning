@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useState, MouseEvent } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
@@ -16,19 +16,26 @@ import AdbIcon from '@mui/icons-material/Adb'
 import { useTheme } from '@mui/material/styles'
 import { MainLogo } from './MainLogo'
 import { CONSTANTS } from 'src/utils/constants'
-import { CustomButton } from './ui'
+import { CustomButton, CustomModal } from './ui'
 
+
+// function ResponsiveAppBar({ open, setModal, setText, setTitle }: IResponsiveAppBarProps) {
 function ResponsiveAppBar() {
-	const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
-	const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
+	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
+	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(
 		null
 	)
 
-	const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
+	const [open, setOpen] = useState(false)
+
+	const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
 		setAnchorElNav(event.currentTarget)
 	}
-	const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
+	const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
+		console.log(open);
+
 		setAnchorElUser(event.currentTarget)
+		setOpen(!open)
 	}
 
 	const handleCloseNavMenu = () => {
@@ -54,6 +61,7 @@ function ResponsiveAppBar() {
 			}}
 		>
 			<Container maxWidth='xl'>
+				<CustomModal open={open} setModal={handleOpenUserMenu} />
 				<Toolbar disableGutters variant='dense' style={{ overflow: 'hidden' }}>
 					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
 					<Typography
@@ -161,9 +169,9 @@ function ResponsiveAppBar() {
 					</Box>
 
 					<Box sx={{ flexGrow: 0 }}>
-						<Tooltip title='Book Schedule'>
+						<Tooltip title='Book Schedule' >
 							<Button
-								onClick={handleOpenUserMenu}
+								onClick={(e) => handleOpenUserMenu(e)}
 								variant='outlined'
 								endIcon={<CalendarMonth />}
 							>
