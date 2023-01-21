@@ -1,5 +1,9 @@
 import { v4 as uuidv4 } from 'uuid'
+<<<<<<< HEAD
 import { IServices, ITarif } from '@/types'
+=======
+import { IServices, IWeeklyProgramData } from '@/types'
+>>>>>>> 1c6c01464dc17e7d32a0a8fb2e0592ae52132cf5
 
 export const itemData = [
 	{
@@ -387,23 +391,6 @@ export const servicesData: IServices[] = [
 			},
 		],
 	},
-	// {
-	// 	id: uuidv4(),
-	// 	title: 'Stairways Cleaning',
-	// 	category: ['home'],
-	// 	content: [
-	// 		{
-	// 			id: uuidv4(),
-	// 			title: 'Stairways Cleaning',
-	// 			services: [
-	// 				'Vacuuming and mopping the stairs',
-	// 				'Wiping the frames/baseboards/common doors/windows and walls',
-	// 				'Cleaning and sanitizing the tile floors by the entrances and removing all waste and unwanted mail papers from the floors',
-	// 				'Cleaning and sanitizing the laundry rooms and the machines',
-	// 			],
-	// 		},
-	// 	],
-	// },
 ]
 
 export const fakeTarif: ITarif[] = [
@@ -470,4 +457,119 @@ export const fakeTarif: ITarif[] = [
 		]
 
 	}
+]
+export const weeklyProgramData: IWeeklyProgramData[] = [
+	{
+		id: 1,
+		tariff: 'one time',
+		services: [
+			{
+				id: 1,
+				title: 'dust one time',
+				includes: true,
+			},
+			{
+				id: 2,
+				title: 'dasfasdf',
+				includes: false,
+			},
+			{
+				id: 3,
+				title: 'asdf332 23',
+				includes: true,
+			},
+			{
+				id: 4,
+				title: '33333',
+				includes: false,
+			},
+			{
+				id: 4,
+				title: 'wet windows',
+				includes: [
+					{
+						tariff: '',
+					},
+				],
+			},
+		],
+	},
+	{
+		id: 2,
+		tariff: 'weekly',
+		services: [
+			{
+				id: 1,
+				title: 'dust weekly',
+				includes: true,
+			},
+			{
+				id: 2,
+				title: 'dasfasdf',
+				includes: false,
+			},
+			{
+				id: 3,
+				title: 'asdf332 23',
+				includes: true,
+			},
+			{
+				id: 4,
+				title: '33333',
+				includes: false,
+			},
+		],
+	},
+	{
+		id: 3,
+		tariff: 'bi-weekly',
+		services: [
+			{
+				id: 1,
+				title: 'dust bi-weekly',
+				includes: true,
+			},
+			{
+				id: 2,
+				title: 'dasfasdf',
+				includes: false,
+			},
+			{
+				id: 3,
+				title: 'asdf332 23',
+				includes: true,
+			},
+			{
+				id: 4,
+				title: '33333',
+				includes: false,
+			},
+		],
+	},
+	{
+		id: 4,
+		tariff: 'monthly',
+		services: [
+			{
+				id: 1,
+				title: 'dust monthly',
+				includes: true,
+			},
+			{
+				id: 2,
+				title: 'dasfasdf monthly',
+				includes: false,
+			},
+			{
+				id: 3,
+				title: 'asdf332 23 monthly',
+				includes: true,
+			},
+			{
+				id: 4,
+				title: '33333',
+				includes: false,
+			},
+		],
+	},
 ]

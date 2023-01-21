@@ -3,9 +3,9 @@ import { breadcrumbsHelper } from 'src/utils/breadcrumbsHelper'
 import { NextRouter } from 'next/router'
 import Typography from '@mui/material/Typography'
 import HomeIcon from '@mui/icons-material/Home'
+import { grey } from '@mui/material/colors'
 
 export const CustomBreadcrumbs = ({ router }) => {
-
 	if (!router) {
 		return null
 	}
@@ -14,7 +14,7 @@ export const CustomBreadcrumbs = ({ router }) => {
 			sx={{
 				borderBottom: `1px solid #cccccc64`,
 				padding: 2,
-				color: '#444',
+				color: grey[500],
 				fontSize: 15,
 				letterSpacing: 1,
 				display: 'flex',
@@ -26,7 +26,10 @@ export const CustomBreadcrumbs = ({ router }) => {
 				underline='hover'
 				color='inherit'
 				href='/'
-				sx={{ display: 'flex', alignItems: 'center' }}
+				sx={{
+					display: 'flex',
+					alignItems: 'center',
+				}}
 			>
 				<HomeIcon sx={{ mr: 0.5 }} fontSize='inherit' />
 				Home
