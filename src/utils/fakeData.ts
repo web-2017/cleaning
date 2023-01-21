@@ -1,9 +1,5 @@
 import { v4 as uuidv4 } from 'uuid'
-<<<<<<< HEAD
-import { IServices, ITarif } from '@/types'
-=======
-import { IServices, IWeeklyProgramData } from '@/types'
->>>>>>> 1c6c01464dc17e7d32a0a8fb2e0592ae52132cf5
+import { IServices, IWeeklyProgramData, ITarif } from '@/types'
 
 export const itemData = [
 	{
