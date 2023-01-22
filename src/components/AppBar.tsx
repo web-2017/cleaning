@@ -32,8 +32,6 @@ function ResponsiveAppBar() {
 		setAnchorElNav(event.currentTarget)
 	}
 	const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
-		console.log(open);
-
 		setAnchorElUser(event.currentTarget)
 		setOpen(!open)
 	}

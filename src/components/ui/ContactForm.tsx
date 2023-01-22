@@ -21,12 +21,12 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 
 	const sendEmail = (e: any) => {
 		e.preventDefault()
-		console.log(1)
 
-		if (!email && !phone && textarea.length < 5) {
+		if (!email || !phone || textarea.length < 5) {
 			setOpen(true)
 			return
-		} else {
+		}
+		else {
 			setOpen(false)
 			const fieldsData = {
 				name,
