@@ -7,7 +7,7 @@ interface ICustomInputProps {
 
 const CustomInput = styled(
 	(labelColor, props: TextFieldProps & ICustomInputProps) => (
-		<TextField
+		<CustomTextField
 			InputProps={{ disableUnderline: true } as Partial<OutlinedInputProps>}
 			{...props}
 		/>

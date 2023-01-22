@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren, CSSProperties } from 'react'
-import { CustomImage, Text } from '@/ui'
+import { CustomImage, CustomText } from '@/ui'
 import { Box } from '@mui/system'
 import { CONSTANTS } from '../utils/constants'
 
@@ -33,7 +33,7 @@ export const MainLogo: FC<PropsWithChildren<IMainLogoProps>> = ({
 						height={40}
 						alt={'icon'}
 					/>
-					<Text
+					<CustomText
 						style={{
 							fontWeight: 'bold',
 							textTransform: 'uppercase',
@@ -41,7 +41,7 @@ export const MainLogo: FC<PropsWithChildren<IMainLogoProps>> = ({
 						}}
 					>
 						{CONSTANTS.mainTitle}
-					</Text>
+					</CustomText>
 				</>
 			) : (
 				<>
@@ -51,7 +51,7 @@ export const MainLogo: FC<PropsWithChildren<IMainLogoProps>> = ({
 						height={40}
 						alt={'icon'}
 					/>
-					<Text
+					<CustomText
 						style={{
 							fontWeight: 'bold',
 							textTransform: 'uppercase',
@@ -59,7 +59,7 @@ export const MainLogo: FC<PropsWithChildren<IMainLogoProps>> = ({
 						}}
 					>
 						{CONSTANTS.mainTitle}
-					</Text>
+					</CustomText>
 				</>
 			)}
 		</Box>

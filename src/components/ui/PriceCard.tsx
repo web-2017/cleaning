@@ -4,7 +4,7 @@ import { grey } from '@mui/material/colors'
 
 import { Title } from './Title';
 import { ITarif } from '@/types';
-import { Text } from './Text';
+import { Text } from './CustomText';
 import { CustomButton } from './CustomButton';
 import theme from 'src/utils/theme';
 import { COLORS } from '@/utils';
@@ -24,15 +24,15 @@ export const PriceCard = ({ data }: { data: ITarif }) => {
             flexDirection: 'column',
             justifyContent: 'space-between'
         }}>
-            <Text style={{ fontSize: 24, margin: 0, marginBottom: 30 }}>{data?.tarif}</Text>
+            <CustomText style={{ fontSize: 24, margin: 0, marginBottom: 30 }}>{data?.tarif}</CustomText>
             <Title size={24} mb={4} bold>{data?.title}</Title>
-            <Text style={{
+            <CustomText style={{
                 fontSize: 18,
                 margin: 0, marginBottom: 30,
                 color: grey[400]
             }}>
                 {data?.subtitle}
-            </Text>
+            </CustomText>
             <Box mb={10} sx={{ color: grey[900] }}>
                 {
                     data?.lists?.map((list, index) => {
@@ -57,7 +57,7 @@ export const PriceCard = ({ data }: { data: ITarif }) => {
                     bold
                     style={{ fontSize: 16 }}
                 />
-                <Text
+                <CustomText
                     style={{
                         marginLeft: 0,
                         fontSize: 14,
@@ -65,7 +65,7 @@ export const PriceCard = ({ data }: { data: ITarif }) => {
                     }}
                 >
                     <CustomLink href={'tarif'} text='Compare features.' />
-                </Text>
+                </CustomText>
             </Box>
 
         </Grid>

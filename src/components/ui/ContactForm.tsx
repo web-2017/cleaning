@@ -98,7 +98,7 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 
 			{open && <CustomAlertField setOpen={setOpen} title='Error' />}
 			<Grid item={true} xs={12} sm={6} md={6}>
-				<TextField
+				<CustomTextField
 					label='Name'
 					value={name}
 					onChange={(e) => setName(e.target.value)}
@@ -106,7 +106,7 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 				/>
 			</Grid>
 			<Grid item={true} xs={12} sm={6} md={6}>
-				<TextField
+				<CustomTextField
 					required
 					label='Phone'
 					value={phone}
@@ -115,7 +115,7 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 				/>
 			</Grid>
 			<Grid item={true} xs={12} sm={6}>
-				<TextField
+				<CustomTextField
 					required
 					label='Email'
 					value={email}
@@ -132,13 +132,13 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 						onChange={(newValue) => {
 							setDate(newValue as Date)
 						}}
-						renderInput={(params) => <TextField {...params} />}
+						renderInput={(params) => <CustomTextField {...params} />}
 					/>
 				</LocalizationProvider>
 			</Grid>
 
 			<Grid item={true} xs={12}>
-				<TextField
+				<CustomTextField
 					multiline
 					rows={4}
 					fullWidth

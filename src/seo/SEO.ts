@@ -25,4 +25,10 @@ export const SEO = {
 		keywords:
 			'Cleanexis, tariff  of Cleaning Services, Plans of cleaning, residential cleaning, commercial cleaning, cleaning contractors chicago IL',
 	},
+	about: {
+		title: `${CONSTANTS.mainTitle} | About Cleaning Services`,
+		description: 'About our company Cleanexis Cleaning services',
+		keywords:
+			'Cleanexis, About Cleaning Services, Plans of cleaning, residential cleaning, commercial cleaning, cleaning contractors chicago IL',
+	},
 }

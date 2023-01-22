@@ -32,18 +32,18 @@ export const SectionAbout = () => {
 				<Title bold size={20} variant='h4'>
 					QUICKLY AND EASY TO CLEAN YOUR OFFICE AND HOUSE
 				</Title>
-				<Text style={{ marginLeft: 0 }}>
+				<CustomText style={{ marginLeft: 0 }}>
 					Amet minim mollit non deserunt ullamco sit aliqua dolor do consequat
 					sunt nostrud amet. Amet minim mollit non deserunt ullamco aliqua dolo
 					ame.
-				</Text>
+				</CustomText>
 				<Title size={16} variant='h5' color={COLORS.blue}>
 					AWARD WINNING COMPANY
 				</Title>
-				<Text style={{ marginLeft: 0 }}>
+				<CustomText style={{ marginLeft: 0 }}>
 					Amet minim mollit non sit aliqua dolor do consequat sunt nostrud amet.
 					Amet mollit ullamco aliqua dolo ame.
-				</Text>
+				</CustomText>
 				<CustomButton variant='contained' text='Our Services' />
 			</Grid>
 			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>

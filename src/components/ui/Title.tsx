@@ -9,6 +9,7 @@ type TitleType = {
 	size?: number
 	variant?: Variant
 	bold?: boolean
+	center?: boolean
 }
 
 export const Title: FC<PropsWithChildren<TitleType>> = ({
@@ -16,6 +17,7 @@ export const Title: FC<PropsWithChildren<TitleType>> = ({
 	style,
 	color,
 	size,
+	center,
 	bold,
 	variant = 'h2',
 	...otherProps
@@ -32,6 +34,7 @@ export const Title: FC<PropsWithChildren<TitleType>> = ({
 				textTransform: 'uppercase',
 				fontFamily: theme.typography.fontFamily,
 				fontWeight: bold ? 'bold' : 'normal',
+				textAlign: center ? 'center' : 'left',
 				...style,
 			}}
 			{...otherProps}

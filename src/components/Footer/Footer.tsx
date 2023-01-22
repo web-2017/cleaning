@@ -11,7 +11,7 @@ import { memo } from 'react'
 import { Box } from '@mui/system'
 
 import { COLORS } from '../../utils/COLORS'
-import { CustomButton, Text } from '@/ui'
+import { CustomButton, CustomText } from '@/ui'
 import { MainLogo } from '../MainLogo'
 import { FooterList } from './FooterList'
 import { footerMenu } from 'src/utils/fakeData'
@@ -76,10 +76,10 @@ const Footer = () => {
 					<Grid item={true} sm={4}>
 						<Box>
 							<MainLogo variant />
-							<Text style={{ marginLeft: 0 }}>
+							<CustomText style={{ marginLeft: 0 }}>
 								Amet minim mollit non deserunt ullamc est sit aliqua dolor amet
 								sint. Amet minim mollit non deserunt ullamco est sit aliqua.
-							</Text>
+							</CustomText>
 						</Box>
 						<Box sx={{ textAlign: 'center' }}>
 							<IconButton
@@ -100,9 +100,9 @@ const Footer = () => {
 							</IconButton>
 						</Box>
 						<Box>
-							<Text style={{ marginLeft: 0 }}>
+							<CustomText style={{ marginLeft: 0 }}>
 								Subscribe our news letter to get latest news and updates
-							</Text>
+							</CustomText>
 							<Box sx={{ display: 'flex' }}>
 								<CssTextField
 									fullWidth

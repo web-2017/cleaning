@@ -13,13 +13,13 @@ type VariantType =
 	| 'caption'
 	| 'overline'
 
-type TextType = {
+type CustomTextType = {
 	variant?: VariantType
 	style?: CSSProperties
 	size?: number
 }
 
-export const Text: FC<PropsWithChildren<TextType>> = ({
+export const CustomText: FC<PropsWithChildren<CustomTextType>> = ({
 	variant,
 	style,
 	size,

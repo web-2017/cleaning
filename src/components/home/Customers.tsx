@@ -84,7 +84,7 @@ export const Customers = () => {
 							titleSize={20}
 							subtitleSize={16}
 						/>
-						<Text size={14}>{elem.text}</Text>
+						<CustomText size={14}>{elem.text}</CustomText>
 						<Box>
 							<Rating name='read-only' value={elem.star} readOnly />
 						</Box>

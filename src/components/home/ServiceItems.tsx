@@ -69,11 +69,11 @@ const ServiceItems = () => {
 						<Title size={20} color={COLORS.blue} style={{ paddingBottom: 10 }}>
 							house Cleaning
 						</Title>
-						<Text size={14} style={{ margin: 0 }}>
+						<CustomText size={14} style={{ margin: 0 }}>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							ametAmet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet
-						</Text>
+						</CustomText>
 					</Box>
 				</Paper>
 			</Grid>
@@ -135,11 +135,11 @@ const ServiceItems = () => {
 						<Title size={20} color={COLORS.blue} style={{ paddingBottom: 10 }}>
 							Living room
 						</Title>
-						<Text size={14} style={{ margin: 0 }}>
+						<CustomText size={14} style={{ margin: 0 }}>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							ametAmet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet
-						</Text>
+						</CustomText>
 					</Box>
 				</Paper>
 			</Grid>
@@ -201,11 +201,11 @@ const ServiceItems = () => {
 						<Title size={20} color={COLORS.blue} style={{ paddingBottom: 10 }}>
 							Bed room
 						</Title>
-						<Text size={14} style={{ margin: 0 }}>
+						<CustomText size={14} style={{ margin: 0 }}>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							ametAmet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet
-						</Text>
+						</CustomText>
 					</Box>
 				</Paper>
 			</Grid>
@@ -267,11 +267,11 @@ const ServiceItems = () => {
 						<Title size={20} color={COLORS.blue} style={{ paddingBottom: 10 }}>
 							Bath room
 						</Title>
-						<Text size={14} style={{ margin: 0 }}>
+						<CustomText size={14} style={{ margin: 0 }}>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							ametAmet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet
-						</Text>
+						</CustomText>
 					</Box>
 				</Paper>
 			</Grid>
@@ -333,11 +333,11 @@ const ServiceItems = () => {
 						<Title size={20} color={COLORS.blue} style={{ paddingBottom: 10 }}>
 							Kitchen
 						</Title>
-						<Text size={14} style={{ margin: 0 }}>
+						<CustomText size={14} style={{ margin: 0 }}>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							ametAmet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet
-						</Text>
+						</CustomText>
 					</Box>
 				</Paper>
 			</Grid>
@@ -398,11 +398,11 @@ const ServiceItems = () => {
 						<Title size={20} color={COLORS.blue} style={{ paddingBottom: 10 }}>
 							Floor Cleaning
 						</Title>
-						<Text size={14} style={{ margin: 0 }}>
+						<CustomText size={14} style={{ margin: 0 }}>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							ametAmet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet
-						</Text>
+						</CustomText>
 					</Box>
 				</Paper>
 			</Grid>
@@ -467,11 +467,11 @@ const ServiceItems = () => {
 						<Title size={20} color={COLORS.blue} style={{ paddingBottom: 10 }}>
 							Window Cleaning
 						</Title>
-						<Text size={14} style={{ margin: 0 }}>
+						<CustomText size={14} style={{ margin: 0 }}>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							ametAmet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet
-						</Text>
+						</CustomText>
 					</Box>
 				</Paper>
 			</Grid>
@@ -532,11 +532,11 @@ const ServiceItems = () => {
 						<Title size={20} color={COLORS.blue} style={{ paddingBottom: 10 }}>
 							Office Cleaning
 						</Title>
-						<Text size={14} style={{ margin: 0 }}>
+						<CustomText size={14} style={{ margin: 0 }}>
 							Amet minim mollit non deserunt ullamco est sit aliqua dolor do
 							ametAmet minim mollit non deserunt ullamco est sit aliqua dolor do
 							amet
-						</Text>
+						</CustomText>
 					</Box>
 				</Paper>
 			</Grid>
