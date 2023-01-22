@@ -13,7 +13,7 @@ const About = () => {
 		keywords={SEO.about.keywords}
 		router={router}
 	>
-		<Title center size={40} style={{ margin: '50px 0' }}>About us</Title>
+		<Title variant='h1' center size={40} style={{ margin: '50px 0' }}>About us</Title>
 		<Grid container spacing={2}>
 			<Grid item={true} sm={12} md={6} mb={3}>
 				<CustomText size={16}>
