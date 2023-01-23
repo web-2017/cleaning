@@ -10,6 +10,7 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { CustomAlertField } from './CustomAlertField'
 import { CONSTANTS } from '@/utils'
 import { CustomButton } from './CustomButton'
+import { CustomTextField } from './CustomTextField'
 
 export const ContactForm = ({ address }: { address?: boolean }) => {
 	const [name, setName] = useState('')
@@ -25,8 +26,7 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 		if (!email || !phone || textarea.length < 5) {
 			setOpen(true)
 			return
-		}
-		else {
+		} else {
 			setOpen(false)
 			const fieldsData = {
 				name,
@@ -93,7 +93,6 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 				>
 					{CONSTANTS.phone.primary}
 				</Typography>
-
 			</Grid>
 
 			{open && <CustomAlertField setOpen={setOpen} title='Error' />}
@@ -151,9 +150,11 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 					}}
 				/>
 			</Grid>
-			{address && <Typography mt={2} style={{ textAlign: 'center' }} variant='h6'>
-				{CONSTANTS.company.address}
-			</Typography>}
+			{address && (
+				<Typography mt={2} style={{ textAlign: 'center' }} variant='h6'>
+					{CONSTANTS.company.address}
+				</Typography>
+			)}
 			<Grid
 				style={{ marginTop: '20px' }}
 				container

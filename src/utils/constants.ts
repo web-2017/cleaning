@@ -38,6 +38,7 @@ export const CONSTANTS = {
 		phone: '+1 233 3333333',
 		address:
 			'Park Ridge, Skokie/Linkolnwood, Evanston, Winnetka, Barrington, Shaumburg, Oak Brook, Norridge/Rosemont, Northside Chicago, Lincoln Park',
+		email: 'info@cleanexis.com',
 	},
 	phone: {
 		primary: '+1 233 3333333',

@@ -1,5 +1,6 @@
 import { v4 as uuidv4 } from 'uuid'
 import { IServices, IWeeklyProgramData, ITarif } from '@/types'
+import { CONSTANTS } from './constants'
 
 export const itemData = [
 	{
@@ -131,11 +132,11 @@ export const footerMenu = [
 		menus: [
 			{
 				link: '#',
-				text: '(+021) 254 4458 187',
+				text: CONSTANTS.company.phone,
 			},
 			{
 				link: '#',
-				text: 'info@email.com',
+				text: CONSTANTS.company.email,
 			},
 			{
 				link: '#',
@@ -394,22 +395,22 @@ export const fakeTarif: ITarif[] = [
 		id: 1,
 		tarif: 'Basic',
 		title: 'For individuals and teams getting started.',
-		subtitle: 'Everything we can do to empower you to creating awesome content.',
+		subtitle:
+			'Everything we can do to empower you to creating awesome content.',
 		lists: [
 			{
-				item: 'Single user licence with one workspace'
+				item: 'Single user licence with one workspace',
 			},
 			{
-				item: 'Access to your individual asset library'
+				item: 'Access to your individual asset library',
 			},
 			{
-				item: 'Access to standard templates'
+				item: 'Access to standard templates',
 			},
 			{
-				item: 'Export content as PNG, PDF and MP4'
+				item: 'Export content as PNG, PDF and MP4',
 			},
-		]
-
+		],
 	},
 	{
 		id: 2,
@@ -418,19 +419,18 @@ export const fakeTarif: ITarif[] = [
 		subtitle: 'Includes',
 		lists: [
 			{
-				item: 'Single user licence with one workspace'
+				item: 'Single user licence with one workspace',
 			},
 			{
-				item: 'Access to your individual asset library'
+				item: 'Access to your individual asset library',
 			},
 			{
-				item: 'Access to standard templates'
+				item: 'Access to standard templates',
 			},
 			{
-				item: 'Export content as PNG, PDF and MP4'
+				item: 'Export content as PNG, PDF and MP4',
 			},
-		]
-
+		],
 	},
 	{
 		id: 3,
@@ -439,20 +439,19 @@ export const fakeTarif: ITarif[] = [
 		subtitle: 'Includes',
 		lists: [
 			{
-				item: 'Single user licence with one workspace'
+				item: 'Single user licence with one workspace',
 			},
 			{
-				item: 'Access to your individual asset library'
+				item: 'Access to your individual asset library',
 			},
 			{
-				item: 'Access to standard templates'
+				item: 'Access to standard templates',
 			},
 			{
-				item: 'Export content as PNG, PDF and MP4'
+				item: 'Export content as PNG, PDF and MP4',
 			},
-		]
-
-	}
+		],
+	},
 ]
 export const weeklyProgramData: IWeeklyProgramData[] = [
 	{

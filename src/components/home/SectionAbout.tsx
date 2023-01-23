@@ -4,14 +4,15 @@ import { Box, Grid } from '@mui/material'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 
-import { Title, Text, CustomButton } from '@/ui'
+import { Title, Text, CustomButton, CustomText } from '@/ui'
 import { COLORS, itemData } from '@/utils'
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
 	return {
 		src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-		srcSet: `${image}?w=${size * cols}&h=${size * rows
-			}&fit=crop&auto=format&dpr=2 2x`,
+		srcSet: `${image}?w=${size * cols}&h=${
+			size * rows
+		}&fit=crop&auto=format&dpr=2 2x`,
 	}
 }
 
@@ -47,11 +48,7 @@ export const SectionAbout = () => {
 				<CustomButton variant='contained' text='Our Services' />
 			</Grid>
 			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
-				<ImageList
-					variant='quilted'
-					cols={4}
-					rowHeight={150}
-				>
+				<ImageList variant='quilted' cols={4} rowHeight={150}>
 					{itemData.map((item) => (
 						<ImageListItem
 							key={item.img}
@@ -70,5 +67,3 @@ export const SectionAbout = () => {
 		</Grid>
 	)
 }
-
-
