@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography'
 import HomeIcon from '@mui/icons-material/Home'
 import { grey } from '@mui/material/colors'
 
-export const CustomBreadcrumbs = ({ router }) => {
+export const CustomBreadcrumbs = ({ router }: { router: any }) => {
 	if (!router) {
 		return null
 	}

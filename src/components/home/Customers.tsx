@@ -64,7 +64,7 @@ export const Customers = () => {
 	function Item({ item, index }: { item: any; index: number }) {
 		return (
 			<Grid container spacing={2} flexDirection='row'>
-				{item.users.map((elem: string, i: number) => (
+				{item.users.map((elem: any, i: number) => (
 					<Grid
 						key={i}
 						item={true}
@@ -97,7 +97,7 @@ export const Customers = () => {
 		<Grid container spacing={2}>
 			<Grid item={true} sm={12} mt={5} mb={10}>
 				<TitleSubtitle
-					mb={10}
+					style={{ marginBottom: 10 }}
 					title='WHAT OUR CUSTOMERS SAY'
 					subTitle='HAPPY CUSTOMERS'
 				/>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Grid, Button, Typography, Box } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import emailjs from '@emailjs/browser'
 import { Link } from '@mui/material'
@@ -95,7 +95,14 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 				</Typography>
 			</Grid>
 
-			{open && <CustomAlertField setOpen={setOpen} title='Error' />}
+			{open && (
+				<CustomAlertField
+					setOpen={setOpen}
+					title='Error'
+					text=''
+					kindOfError='error'
+				/>
+			)}
 			<Grid item={true} xs={12} sm={6} md={6}>
 				<CustomTextField
 					label='Name'
@@ -131,7 +138,7 @@ export const ContactForm = ({ address }: { address?: boolean }) => {
 						onChange={(newValue) => {
 							setDate(newValue as Date)
 						}}
-						renderInput={(params) => <CustomTextField {...params} />}
+						renderInput={(params) => <TextField {...params} />}
 					/>
 				</LocalizationProvider>
 			</Grid>

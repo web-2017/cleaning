@@ -17,8 +17,8 @@ const styles = {
 			background: 'linear-gradient(-45deg, #bfedfd, #fff, #fff, #bfedfd)',
 			width: '100%',
 			height: '100%',
-			zIndex: -1
-		}
+			zIndex: -1,
+		},
 	},
 	wrapper: {
 		display: 'flex',
@@ -31,8 +31,8 @@ const styles = {
 }
 
 interface IHero extends IModalProps {
-	setText: (param: string) => string
-	setTitle: (param: string) => string
+	setText: any
+	setTitle: any
 }
 
 export const Hero = ({ open, setModal, setTitle, setText }: IHero) => {
@@ -44,12 +44,11 @@ export const Hero = ({ open, setModal, setTitle, setText }: IHero) => {
 		setText('asdfasd Hero')
 	}
 
-
 	return (
 		<Grid container sx={styles.container}>
 			<Grid item={true} xs={12} md={6} style={styles.wrapper}>
 				<Box sx={{ width: { xs: '100%', md: '400px' } }}>
-					<Title variant='h3' size={20} pb={2}>
+					<Title variant='h3' size={20} style={{ paddingBottom: 2 }}>
 						HIGHLY PROFESSIONAL CLEANING
 					</Title>
 					<Title variant='h1' size={40}>

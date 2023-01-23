@@ -1,13 +1,10 @@
-export interface IServices {
-	id: number
-}
 type IServicesType = {
 	id: string
 	title: string
 	services: any[]
 }
 export interface IServices {
-	id: number
+	id: number | string
 	title: string
 	contents: IServicesType[]
 	category: string[]
@@ -24,7 +21,7 @@ export interface IWeeklyProgramData {
 	services: IWeeklyServicesType[]
 }
 
-export interface ITarif {
+export interface ITariff {
 	id: number
 	tarif: string
 	title: string

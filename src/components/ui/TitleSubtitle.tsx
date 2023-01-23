@@ -1,18 +1,20 @@
-import { Grid } from '@mui/material'
+import { Grid, TypographyProps } from '@mui/material'
 import React, { CSSProperties } from 'react'
 import { COLORS } from 'src/utils/COLORS'
 import { Title } from './Title'
+import { Variant } from '@mui/material/styles/createTypography'
 
 type TitleSubtitleType = {
 	subTitle?: string
 	subTitleStyle?: CSSProperties
-	subTitleVariant?: string
+	subTitleVariant?: Variant
 	title: string
 	titleStyle?: CSSProperties
-	titleVariant?: string
+	titleVariant?: Variant
 	subtitleSize?: number
 	titleSize?: number
 	style?: CSSProperties
+	otherProps?: TypographyProps
 }
 
 export const TitleSubtitle = ({

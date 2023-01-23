@@ -113,8 +113,10 @@ const Footer = () => {
 								<CustomButton
 									style={{ padding: 0 }}
 									variant='text'
-									size={'large'}
+									text=''
+									size={'medium'}
 									endIcon={<SendIcon style={{ fontSize: 40, color: '#fff' }} />}
+									onClick={() => null}
 								/>
 							</Box>
 						</Box>

@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid'
-import { IServices, IWeeklyProgramData, ITarif } from '@/types'
+import { IServices, IWeeklyProgramData, ITariff } from '@/types'
 import { CONSTANTS } from './constants'
 
 export const itemData = [
@@ -390,7 +390,7 @@ export const servicesData: IServices[] = [
 	},
 ]
 
-export const fakeTarif: ITarif[] = [
+export const fakeTarif: ITariff[] = [
 	{
 		id: 1,
 		tarif: 'Basic',
@@ -481,11 +481,7 @@ export const weeklyProgramData: IWeeklyProgramData[] = [
 			{
 				id: 4,
 				title: 'wet windows',
-				includes: [
-					{
-						tariff: '',
-					},
-				],
+				includes: false,
 			},
 		],
 	},

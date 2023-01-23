@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Button, Grid } from '@mui/material'
 import { ArrowRightAlt, ArrowRightAltOutlined } from '@mui/icons-material'
 
-import { CustomButton, CustomCard, Text, Title, TitleSubtitle } from '@/ui'
+import { CustomButton, CustomCard, Title, TitleSubtitle } from '@/ui'
 import { newsData } from '../../utils/fakeData'
 import { CONSTANTS } from '../../utils/constants'
 import { COLORS } from '../../utils/COLORS'
@@ -54,6 +54,7 @@ const News = () => {
 					color={'inherit'}
 					endIcon={<ArrowRightAltOutlined />}
 					href='/news'
+					onClick={() => null}
 				/>
 			</Grid>
 			<Grid

@@ -3,7 +3,7 @@ import React from 'react'
 import { grey } from '@mui/material/colors'
 
 import { Title } from './Title'
-import { ITarif } from '@/types'
+import { ITariff } from '@/types'
 import { CustomText } from './CustomText'
 import { CustomButton } from './CustomButton'
 import theme from 'src/utils/theme'
@@ -11,7 +11,7 @@ import { COLORS } from '@/utils'
 import Link from 'next/link'
 import { CustomLink } from './CustomLink'
 
-export const PriceCard = ({ data }: { data: ITarif }) => {
+export const PriceCard = ({ data }: { data: ITariff }) => {
 	return (
 		<Grid
 			item={true}
@@ -28,7 +28,7 @@ export const PriceCard = ({ data }: { data: ITarif }) => {
 			<CustomText style={{ fontSize: 24, margin: 0, marginBottom: 30 }}>
 				{data?.tarif}
 			</CustomText>
-			<Title size={24} mb={4} bold>
+			<Title size={24} bold style={{ marginBottom: 4 }}>
 				{data?.title}
 			</Title>
 			<CustomText
@@ -55,11 +55,11 @@ export const PriceCard = ({ data }: { data: ITarif }) => {
 			</Box>
 			<Box>
 				<CustomButton
-					onClick={() => {}}
 					text='Request now'
 					variant='outlined'
 					bold
 					style={{ fontSize: 16 }}
+					onClick={() => null}
 				/>
 				<CustomText
 					style={{

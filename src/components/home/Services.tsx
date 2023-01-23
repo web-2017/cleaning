@@ -1,7 +1,7 @@
 import { Grid, Paper, useTheme } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
-import { CustomButton, CustomImage, Title, Text, TitleSubtitle } from '@/ui'
+import { CustomButton, CustomImage, Title, TitleSubtitle } from '@/ui'
 import { COLORS } from 'src/utils/COLORS'
 import { useState } from 'react'
 import ServiceItems from './ServiceItems'
@@ -26,6 +26,7 @@ const Services = () => {
 						variant='outlined'
 						text='show more...'
 						href={'/services'}
+						onClick={() => null}
 					/>
 				</Box>
 			</Grid>

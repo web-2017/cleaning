@@ -14,7 +14,7 @@ import Paper from '@mui/material/Paper'
 import { SEO } from 'src/seo/SEO'
 import { blue } from '@mui/material/colors'
 import { weeklyProgramData } from '@/utils'
-import { IWeeklyProgramData, IWeeklyServicesType } from '@/types'
+import { IWeeklyProgramData } from '@/types'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
 	[`&.${tableCellClasses.head}`]: {
@@ -58,12 +58,8 @@ const rows = [
 	),
 ].flat(1)
 const rows2 = [
-	weeklyProgramData
-		?.map<IWeeklyProgramData>((elem) => elem.services)
-		.map((elem) => elem),
+	weeklyProgramData?.map((elem) => elem.services).map((elem) => elem),
 ]
-
-console.log(1, rows.flat(1))
 
 const Plans = () => {
 	const router = useRouter()
@@ -98,17 +94,8 @@ const Plans = () => {
 												scope='row'
 											></StyledTableCell>
 											<StyledTableCell component='th' scope='row'>
-												{item?.title}
+												{/* {item?.title} */}
 											</StyledTableCell>
-											{/* <StyledTableCell component='th' scope='row'>
-												asfasasd
-											</StyledTableCell>
-											<StyledTableCell component='th' scope='row'>
-												asfasasd
-											</StyledTableCell>
-											<StyledTableCell component='th' scope='row'>
-												asfasasd
-											</StyledTableCell> */}
 										</StyledTableRow>
 									)
 								})}

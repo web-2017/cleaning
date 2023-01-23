@@ -1,6 +1,5 @@
 import { TextFieldProps, TextField, OutlinedInputProps } from '@mui/material'
 import styled from 'styled-components'
-import { CustomTextField } from './CustomTextField'
 
 interface ICustomInputProps {
 	labelColor?: string
@@ -15,7 +14,7 @@ const CustomInput = styled(
 	)
 )(({ theme }) => ({
 	'& label.Mui-focused': {
-		color: labelColor ?? '#000',
+		color: '#000',
 	},
 	'& label': {
 		color: '#808080',

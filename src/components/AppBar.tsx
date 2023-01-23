@@ -18,13 +18,10 @@ import { MainLogo } from './MainLogo'
 import { CONSTANTS } from 'src/utils/constants'
 import { CustomButton, CustomModal } from './ui'
 
-
 // function ResponsiveAppBar({ open, setModal, setText, setTitle }: IResponsiveAppBarProps) {
 function ResponsiveAppBar() {
 	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
-	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(
-		null
-	)
+	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)
 
 	const [open, setOpen] = useState(false)
 
@@ -147,7 +144,7 @@ function ResponsiveAppBar() {
 							display: { xs: 'none', md: 'flex' },
 						}}
 					>
-						{CONSTANTS.mainMenu.map((page) => (
+						{CONSTANTS.mainMenu.map((page: any) => (
 							<CustomButton
 								variant='text'
 								href={page.link === 'home' ? (page.href = '/') : page.href}
@@ -167,7 +164,7 @@ function ResponsiveAppBar() {
 					</Box>
 
 					<Box sx={{ flexGrow: 0 }}>
-						<Tooltip title='Book Schedule' >
+						<Tooltip title='Book Schedule'>
 							<Button
 								onClick={(e) => handleOpenUserMenu(e)}
 								variant='outlined'

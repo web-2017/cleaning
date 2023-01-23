@@ -15,16 +15,18 @@ import { SEO } from 'src/seo/SEO'
 import Tarifs from '@/components/home/Tarifs'
 import { CustomModal } from '@/components/ui'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function Home() {
 	const [open, setOpen] = useState(false)
 	const [text, setText] = useState('')
 	const [title, setTitle] = useState('')
 
+	const router = useRouter()
+
 	const handleModal = () => {
 		setOpen(!open)
 	}
-	0.90000008
 	return (
 		<CustomContainer
 			title={SEO.mainPage.title}

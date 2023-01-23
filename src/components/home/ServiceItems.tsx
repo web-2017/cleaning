@@ -7,7 +7,7 @@ import CountertopsIcon from '@mui/icons-material/Countertops'
 
 import { COLORS } from 'src/utils/COLORS'
 import theme from 'src/utils/theme'
-import { CustomImage, Title, Text, CustomText } from '@/ui'
+import { CustomImage, Title, CustomText } from '@/ui'
 
 const ServiceItems = () => {
 	return (

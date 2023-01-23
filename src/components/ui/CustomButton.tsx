@@ -12,7 +12,7 @@ type CustomButtonType = {
 	href?: string
 	linkStyle?: CSSProperties
 	style?: CSSProperties
-	size?: number
+	size?: ButtonProps
 	variant?: VariantType
 	bold?: boolean
 	disabled?: boolean
@@ -40,13 +40,11 @@ export const CustomButton: FC<ButtonProps & CustomButtonType> = ({
 			variant={variant}
 			style={{
 				fontWeight: bold ? 'bold' : 'normal',
-				borderWidth: variant === 'outlined' && bold ?
-					'3px' : '1px',
-				...style
+				borderWidth: variant === 'outlined' && bold ? '3px' : '1px',
+				...style,
 			}}
 			disabled={disabled}
 			onClick={onClick}
-
 		>
 			{href ? (
 				<Link

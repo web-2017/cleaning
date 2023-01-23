@@ -7,7 +7,7 @@ import CloseIcon from '@mui/icons-material/Close'
 type kindOfError = 'error' | 'success'
 
 type CustomAlertFieldType = {
-	setOpen: (param?: boolean) => void
+	setOpen: any
 	title: string
 	kindOfError: kindOfError
 	text: string

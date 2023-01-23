@@ -11,7 +11,7 @@ import { CustomBreadcrumbs, CustomModal } from '@/ui'
 const inter = Inter({ subsets: ['latin'] })
 
 interface ICustomContainerProps extends HeaderType {
-	router: NextRouter
+	router: NextRouter | ''
 	open?: boolean
 	setModal?: any
 	modalTitle?: string

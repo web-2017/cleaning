@@ -28,7 +28,7 @@ const fakeAwards = [
 ]
 
 const Awards = () => {
-	const GridItem = ({ item }) => (
+	const GridItem = ({ item }: { item: any }) => (
 		<Box
 			sx={{
 				textAlign: 'center',

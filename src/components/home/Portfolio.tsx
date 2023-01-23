@@ -23,7 +23,7 @@ const Portfolio = () => {
 			<TitleSubtitle
 				title='RECENT WORK SHOWCASE'
 				subTitle='OUR PORTFOLIO'
-				mb={5}
+				style={{ marginBottom: 5 }}
 			/>
 			{fakePortfolioData?.map((image, index) => (
 				<Grid

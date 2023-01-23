@@ -1,12 +1,12 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import { useTheme } from '@mui/material/styles'
 import { Box, Grid } from '@mui/material'
 import ImageList from '@mui/material/ImageList'
 import ImageListItem from '@mui/material/ImageListItem'
 
-import { Title, Text, CustomButton, CustomText } from '@/ui'
+import { Title, CustomButton, CustomText } from '@/ui'
 import { COLORS, itemData } from '@/utils'
-import Image from 'next/image'
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
 	return {
@@ -14,6 +14,8 @@ function srcset(image: string, size: number, rows = 1, cols = 1) {
 		srcSet: `${image}?w=${size * cols}&h=${
 			size * rows
 		}&fit=crop&auto=format&dpr=2 2x`,
+		width: size * cols,
+		height: size * rows,
 	}
 }
 
@@ -49,24 +51,28 @@ export const SectionAbout = () => {
 				<CustomButton
 					variant='contained'
 					text='Our Services'
-					onClick={console.log('')}
+					onClick={() => null}
 				/>
 			</Grid>
 			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
 				<ImageList variant='quilted' cols={4} rowHeight={150}>
-					{itemData.map((item) => (
-						<ImageListItem
-							key={item.img}
-							cols={item.cols || 1}
-							rows={item.rows || 1}
-						>
-							<Image
-								{...srcset(item.img, 0, item.rows, item.cols)}
-								alt={item.title}
-								loading='lazy'
-							/>
-						</ImageListItem>
-					))}
+					{itemData.map((item) => {
+						return (
+							<ImageListItem
+								key={item.img}
+								cols={item.cols || 1}
+								rows={item.rows || 1}
+							>
+								<img
+									{...srcset(item.img, 0, item.rows, item.cols)}
+									alt={item.title}
+									width={srcset(item.img, 0, item.rows, item.cols)?.width}
+									height={srcset(item.img, 0, item.rows, item.cols)?.height}
+									loading='lazy'
+								/>
+							</ImageListItem>
+						)
+					})}
 				</ImageList>
 			</Grid>
 		</Grid>
