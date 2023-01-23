@@ -18,7 +18,6 @@ import { MainLogo } from './MainLogo'
 import { CONSTANTS } from 'src/utils/constants'
 import { CustomButton, CustomModal } from './ui'
 
-// function ResponsiveAppBar({ open, setModal, setText, setTitle }: IResponsiveAppBarProps) {
 function ResponsiveAppBar() {
 	const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null)
 	const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null)

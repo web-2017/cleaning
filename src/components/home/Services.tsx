@@ -1,11 +1,11 @@
 import { Grid, Paper, useTheme } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
-import { CustomButton, CustomImage, Title, TitleSubtitle } from '@/ui'
-import { COLORS } from 'src/utils/COLORS'
 import { useState } from 'react'
+
+import { CustomButton, CustomImage, Title, TitleSubtitle } from '@/ui'
+
 import ServiceItems from './ServiceItems'
-import Link from 'next/link'
 
 const Services = () => {
 	const theme = useTheme()
