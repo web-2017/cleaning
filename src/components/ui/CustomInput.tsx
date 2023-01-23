@@ -1,5 +1,6 @@
 import { TextFieldProps, TextField, OutlinedInputProps } from '@mui/material'
 import styled from 'styled-components'
+import { CustomTextField } from './CustomTextField'
 
 interface ICustomInputProps {
 	labelColor?: string
@@ -7,7 +8,7 @@ interface ICustomInputProps {
 
 const CustomInput = styled(
 	(labelColor, props: TextFieldProps & ICustomInputProps) => (
-		<CustomTextField
+		<TextField
 			InputProps={{ disableUnderline: true } as Partial<OutlinedInputProps>}
 			{...props}
 		/>

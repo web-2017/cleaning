@@ -6,6 +6,7 @@ import ImageListItem from '@mui/material/ImageListItem'
 
 import { Title, Text, CustomButton, CustomText } from '@/ui'
 import { COLORS, itemData } from '@/utils'
+import Image from 'next/image'
 
 function srcset(image: string, size: number, rows = 1, cols = 1) {
 	return {
@@ -45,7 +46,11 @@ export const SectionAbout = () => {
 					Amet minim mollit non sit aliqua dolor do consequat sunt nostrud amet.
 					Amet mollit ullamco aliqua dolo ame.
 				</CustomText>
-				<CustomButton variant='contained' text='Our Services' />
+				<CustomButton
+					variant='contained'
+					text='Our Services'
+					onClick={console.log('')}
+				/>
 			</Grid>
 			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
 				<ImageList variant='quilted' cols={4} rowHeight={150}>
@@ -55,7 +60,7 @@ export const SectionAbout = () => {
 							cols={item.cols || 1}
 							rows={item.rows || 1}
 						>
-							<img
+							<Image
 								{...srcset(item.img, 0, item.rows, item.cols)}
 								alt={item.title}
 								loading='lazy'
