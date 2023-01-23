@@ -17,7 +17,7 @@ export const CustomTextField = ({
 			{...otherProps}
 			label={label}
 			value={value}
-			onChange={(e) => onChange(e.target.value)}
+			onChange={onChange}
 			fullWidth
 		/>
 	)
