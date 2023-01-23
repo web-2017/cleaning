@@ -30,9 +30,6 @@ export const CustomContainer: FC<PropsWithChildren<ICustomContainerProps>> = ({
 	children,
 	...props
 }) => {
-	const [titles, setTitle] = useState('')
-	const [text, setText] = useState('')
-
 	return (
 		<>
 			<CssBaseline />

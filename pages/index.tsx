@@ -16,8 +16,6 @@ import Tarifs from '@/components/home/Tarifs'
 import { CustomModal } from '@/components/ui'
 import { useState } from 'react'
 
-
-
 export default function Home() {
 	const [open, setOpen] = useState(false)
 	const [text, setText] = useState('')
@@ -25,9 +23,8 @@ export default function Home() {
 
 	const handleModal = () => {
 		setOpen(!open)
-
 	}
-	0.900000080
+	0.90000008
 	return (
 		<CustomContainer
 			title={SEO.mainPage.title}

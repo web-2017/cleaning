@@ -14,10 +14,16 @@ export const Header = ({
 }: HeaderType) => {
 	return (
 		<Head>
-			<title>{title}</title>
+			<meta charSet='utf-8' />
 			<meta name='description' content={description} />
 			<meta name='keywords' content={keywords} />
 			<meta name='viewport' content='width=device-width, initial-scale=1' />
+			<meta name='msapplication-TileColor' content='#ffffff' />
+			<meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
+			<meta name='theme-color' content='#ffffff' />
+			<meta name='googlebot' content='noindex,nofollow' />
+			<title>{title}</title>
+			<meta name='robots' content='noindex,nofollow' />
 			<link rel='icon' href='/favicon.ico' />
 			<link rel='apple-touch-icon' sizes='57x57' href='/apple-icon-57x57.png' />
 			<link rel='apple-touch-icon' sizes='60x60' href='/apple-icon-60x60.png' />
@@ -73,9 +79,6 @@ export const Header = ({
 				href='/favicon-16x16.png'
 			/>
 			<link rel='manifest' href='/manifest.json' />
-			<meta name='msapplication-TileColor' content='#ffffff' />
-			<meta name='msapplication-TileImage' content='/ms-icon-144x144.png' />
-			<meta name='theme-color' content='#ffffff' />
 		</Head>
 	)
 }
