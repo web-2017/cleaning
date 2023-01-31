@@ -46,7 +46,7 @@ const iconPath = [
 const ServiceItems = () => {
 	return (
 		<>
-			{seoContent.servicesData.map((ctx, i) => {
+			{seoContent.servicesListData.map((ctx, i) => {
 				return (
 					<ServiceItem
 						key={i}
