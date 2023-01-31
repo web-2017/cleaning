@@ -25,7 +25,7 @@ export const SectionAbout = () => {
 		<Grid container mt={4} spacing={2}>
 			<Grid item={true} xs={12} sm={6} style={{ alignSelf: 'center' }}>
 				<Box
-					component={'h4'}
+					component={'h3'}
 					style={{
 						color: COLORS.blue,
 						textTransform: 'uppercase',
@@ -37,17 +37,18 @@ export const SectionAbout = () => {
 					QUICKLY AND EASY TO CLEAN YOUR OFFICE AND HOUSE
 				</Title>
 				<CustomText style={{ marginLeft: 0 }}>
-					Amet minim mollit non deserunt ullamco sit aliqua dolor do consequat
-					sunt nostrud amet. Amet minim mollit non deserunt ullamco aliqua dolo
-					ame.
+					We are dedicated to providing high-quality cleaning services to homes
+					and businesses across Illinois, USA. With a team of experienced and
+					professional cleaners, we strive to make every space spotless and
+					hygienic.
 				</CustomText>
-				<Title size={16} variant='h5' color={COLORS.blue}>
+				{/* <Title size={16} variant='h5' color={COLORS.blue}>
 					AWARD WINNING COMPANY
 				</Title>
 				<CustomText style={{ marginLeft: 0 }}>
 					Amet minim mollit non sit aliqua dolor do consequat sunt nostrud amet.
 					Amet mollit ullamco aliqua dolo ame.
-				</CustomText>
+				</CustomText> */}
 				<CustomButton
 					variant='contained'
 					text='Our Services'

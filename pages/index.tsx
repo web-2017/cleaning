@@ -12,7 +12,7 @@ import Awards from '@/components/home/Awards'
 import { Customers } from '@/components/home/Customers'
 import News from '../src/components/home/News'
 import { SEO } from 'src/seo/SEO'
-import Tarifs from '@/components/home/Tarifs'
+import Tariffs from '@/components/home/Tariffs'
 import { CustomModal } from '@/components/ui'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
@@ -53,7 +53,7 @@ export default function Home() {
 			<Brand />
 			<SectionAbout />
 			<Services />
-			<Tarifs />
+			<Tariffs />
 			{/* <OurTeam /> */}
 			<Portfolio />
 			<Awards />

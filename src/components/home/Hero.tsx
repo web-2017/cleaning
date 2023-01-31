@@ -48,19 +48,18 @@ export const Hero = ({ open, setModal, setTitle, setText }: IHero) => {
 		<Grid container sx={styles.container}>
 			<Grid item={true} xs={12} md={6} style={styles.wrapper}>
 				<Box sx={{ width: { xs: '100%', md: '400px' } }}>
-					<Title variant='h3' size={20} style={{ paddingBottom: 2 }}>
-						HIGHLY PROFESSIONAL CLEANING
+					<Title variant='h1' size={20} style={{ paddingBottom: 2 }}>
+						HIGHLY PROFESSIONAL CLEANING services at illinois
 					</Title>
-					<Title variant='h1' size={40}>
+					<Title variant='h2' size={40}>
 						<span style={{ color: theme.palette.primary.main }}>
 							EASY TO CLEAN
 						</span>{' '}
 						HOUSE AND OFFICE
 					</Title>
 					<p>
-						Amet minim mollit non deserunt ullamco sit aliqua dolor do amet
-						sint. Velit officia enim velit mollit. Exercitation veniam consequat
-						sunt nostrud amet.
+						“We are committed to providing impeccable and unparalleled cleaning
+						services to our clients”
 					</p>
 					<CustomButton
 						variant='outlined'
